@@ -1,1 +1,1 @@
-![Pop!_OS / COSMIC](pop-os.png)
+![Pop!_OS / COSMIC](logo.png)
