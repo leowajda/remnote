@@ -1,0 +1,574 @@
+.dark {
+  --cosmic-bg: #1b1b1b;
+  --cosmic-bg-2: #262626;
+  --cosmic-primary: #272727;
+  --cosmic-secondary: #343434;
+  --cosmic-component: #2e2e2e;
+  --cosmic-hover: #434343;
+  --cosmic-pressed: #585858;
+  --cosmic-divider: #444444;
+  --cosmic-border: #484848;
+  --cosmic-text: #e7e7e7;
+  --cosmic-text-bright: #ffffff;
+  --cosmic-text-2: #c0c0c0;
+  --cosmic-text-3: #9e9e9e;
+  --cosmic-text-muted: #808080;
+  --cosmic-accent: #d7b43b;
+  --cosmic-accent-hover: #c0a443;
+  --cosmic-accent-pressed: #766528;
+  --cosmic-on-accent: #000000;
+  --cosmic-accent-soft: rgba(215, 180, 59, 0.14);
+  --cosmic-accent-mid: rgba(215, 180, 59, 0.4);
+  --cosmic-success: #5edb8c;
+  --cosmic-success-soft: rgba(94, 219, 140, 0.18);
+  --cosmic-warning: #ffa37d;
+  --cosmic-warning-soft: rgba(255, 163, 125, 0.18);
+  --cosmic-destructive: #ffa09a;
+  --cosmic-destructive-soft: rgba(255, 160, 154, 0.18);
+  --cosmic-blue: #63d0df;
+  --cosmic-indigo: #a1c0eb;
+  --cosmic-purple: #e79cfe;
+  --cosmic-pink: #ff9cb1;
+  --cosmic-red: #fda1a0;
+  --cosmic-orange: #ffad00;
+  --cosmic-yellow: #f7e062;
+  --cosmic-green: #92cf9c;
+  --cosmic-radius-xs: 4px;
+  --cosmic-radius-s: 8px;
+  --cosmic-radius-m: 16px;
+
+  --rn-clr-background: var(--cosmic-bg);
+  --rn-clr-background-primary: var(--cosmic-bg);
+  --rn-clr-background-secondary: var(--cosmic-primary);
+  --rn-clr-background-tertiary: var(--cosmic-secondary);
+  --rn-clr-background-accent: var(--cosmic-accent);
+  --rn-clr-background-light-accent: var(--cosmic-accent-soft);
+  --rn-clr-background-elevation-5: var(--cosmic-bg);
+  --rn-clr-background-elevation-10: var(--cosmic-bg-2);
+  --rn-clr-background-elevation-15: var(--cosmic-primary);
+  --rn-clr-background-elevation-20: var(--cosmic-component);
+  --rn-clr-background-elevation-30: var(--cosmic-secondary);
+  --rn-clr-background-elevation-40: var(--cosmic-hover);
+  --rn-clr-background-elevation-50: var(--cosmic-hover);
+  --rn-clr-background-elevation-60: var(--cosmic-pressed);
+  --rn-clr-background-elevation-70: var(--cosmic-pressed);
+  --rn-clr-background-elevation-80: var(--cosmic-pressed);
+  --rn-clr-background-elevation-90: var(--cosmic-pressed);
+  --rn-clr-background-elevation-100: var(--cosmic-pressed);
+  --rn-clr-background-positive: var(--cosmic-success);
+  --rn-clr-background-warning: var(--cosmic-warning);
+  --rn-clr-background-negative: var(--cosmic-destructive);
+  --rn-clr-background-light-positive: var(--cosmic-success-soft);
+  --rn-clr-background-light-warning: var(--cosmic-warning-soft);
+  --rn-clr-background-light-negative: var(--cosmic-destructive-soft);
+  --rn-clr-background-state-disabled: rgba(46, 46, 46, 0.5);
+  --rn-clr-background-overlay-dark: rgba(0, 0, 0, 0.55);
+  --rn-clr-background-overlay-light: rgba(27, 27, 27, 0.72);
+  --rn-clr-background-inverse-primary: var(--cosmic-text-bright);
+  --rn-clr-background-inverse-secondary: var(--cosmic-text-2);
+  --rn-clr-background-always-dark: var(--cosmic-bg);
+  --rn-clr-background-always-light: #f5f5f5;
+  --rn-clr-background-logo-color: var(--cosmic-accent);
+
+  --rn-clr-content-primary: var(--cosmic-text);
+  --rn-clr-content-secondary: var(--cosmic-text-2);
+  --rn-clr-content-tertiary: var(--cosmic-text-3);
+  --rn-clr-content-second: var(--cosmic-text-2);
+  --rn-clr-content-accent: var(--cosmic-accent);
+  --rn-clr-content-on-color: var(--cosmic-on-accent);
+  --rn-clr-content-on-color-inverse: var(--cosmic-text-bright);
+  --rn-clr-content-positive: var(--cosmic-success);
+  --rn-clr-content-warning: var(--cosmic-warning);
+  --rn-clr-content-negative: var(--cosmic-destructive);
+  --rn-clr-content-state-disabled: var(--cosmic-text-muted);
+  --rn-clr-content-state-warning: var(--cosmic-warning);
+  --rn-clr-content-inverse-primary: var(--cosmic-bg);
+  --rn-clr-content-inverse-secondary: var(--cosmic-primary);
+  --rn-clr-content-inverse-tertiary: var(--cosmic-secondary);
+  --rn-clr-content-logo-color: var(--cosmic-accent);
+
+  --rn-clr-border-opaque: var(--cosmic-divider);
+  --rn-clr-border-selected: var(--cosmic-border);
+  --rn-clr-border-accent: var(--cosmic-accent);
+  --rn-clr-border-accent-light: var(--cosmic-accent-hover);
+  --rn-clr-border-light-accent: var(--cosmic-accent-soft);
+  --rn-clr-border-positive: var(--cosmic-success);
+  --rn-clr-border-warning: var(--cosmic-warning);
+  --rn-clr-border-negative: var(--cosmic-destructive);
+  --rn-clr-border-state-disabled: rgba(190, 190, 190, 0.35);
+  --rn-clr-border-inverse-opaque: var(--cosmic-text-3);
+  --rn-clr-border-inverse-selected: var(--cosmic-text-2);
+
+  --rn-colors-gray-0: var(--cosmic-bg);
+  --rn-colors-gray-5: var(--cosmic-bg-2);
+  --rn-colors-gray-10: var(--cosmic-primary);
+  --rn-colors-gray-15: var(--cosmic-component);
+  --rn-colors-gray-20: var(--cosmic-secondary);
+  --rn-colors-gray-30: var(--cosmic-border);
+  --rn-colors-gray-40: #636363;
+  --rn-colors-gray-50: var(--cosmic-text-muted);
+  --rn-colors-gray-60: var(--cosmic-text-3);
+  --rn-colors-gray-70: var(--cosmic-text-2);
+  --rn-colors-gray-80: var(--cosmic-text);
+  --rn-colors-gray-90: #dedede;
+  --rn-colors-gray-100: var(--cosmic-text-bright);
+
+  --highlight-color-red: var(--cosmic-red);
+  --highlight-color-orange: var(--cosmic-orange);
+  --highlight-color-yellow: var(--cosmic-yellow);
+  --highlight-color-blue: var(--cosmic-blue);
+  --highlight-color-purple: var(--cosmic-purple);
+  --highlight-color-green: var(--cosmic-green);
+
+  --tw-bg-opacity: 1;
+  --tw-bg-opacity-highlight: 0.22;
+}
+
+.dark ::selection {
+  background-color: var(--cosmic-accent-mid);
+  color: var(--cosmic-text-bright);
+}
+
+.dark .rn-clr-background,
+.dark .rn-clr-background-primary {
+  background-color: var(--cosmic-bg) !important;
+}
+
+.dark .rn-clr-background-secondary {
+  background-color: var(--cosmic-primary) !important;
+}
+
+.dark .rn-clr-background-tertiary {
+  background-color: var(--cosmic-secondary) !important;
+}
+
+.dark .rn-clr-background-accent {
+  background-color: var(--cosmic-accent) !important;
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark .rn-clr-background-accent--hovered,
+.dark .hover\:rn-clr-background-accent--hovered:hover {
+  background-color: var(--cosmic-accent-hover) !important;
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark .rn-clr-background-light-accent {
+  background-color: var(--cosmic-accent-soft) !important;
+}
+
+.dark .rn-clr-background-elevation-5 {
+  background-color: var(--cosmic-bg) !important;
+}
+
+.dark .rn-clr-background-elevation-10 {
+  background-color: var(--cosmic-bg-2) !important;
+}
+
+.dark .rn-clr-background-elevation-15 {
+  background-color: var(--cosmic-primary) !important;
+}
+
+.dark .rn-clr-background-elevation-20 {
+  background-color: var(--cosmic-component) !important;
+}
+
+.dark .rn-clr-background-elevation-30,
+.dark .rn-clr-background-elevation-40,
+.dark .rn-clr-background-elevation-50 {
+  background-color: var(--cosmic-secondary) !important;
+}
+
+.dark .rn-clr-background-positive {
+  background-color: var(--cosmic-success) !important;
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark .rn-clr-background-warning {
+  background-color: var(--cosmic-warning) !important;
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark .rn-clr-background-negative {
+  background-color: var(--cosmic-destructive) !important;
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark .rn-clr-background-light-positive {
+  background-color: var(--cosmic-success-soft) !important;
+}
+
+.dark .rn-clr-background-light-warning {
+  background-color: var(--cosmic-warning-soft) !important;
+}
+
+.dark .rn-clr-background-light-negative {
+  background-color: var(--cosmic-destructive-soft) !important;
+}
+
+.dark .rn-clr-content-primary {
+  color: var(--cosmic-text) !important;
+}
+
+.dark .rn-clr-content-secondary,
+.dark .rn-clr-content-second {
+  color: var(--cosmic-text-2) !important;
+}
+
+.dark .rn-clr-content-tertiary {
+  color: var(--cosmic-text-3) !important;
+}
+
+.dark .rn-clr-content-accent {
+  color: var(--cosmic-accent) !important;
+}
+
+.dark .rn-clr-content-on-color {
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark .rn-clr-content-positive {
+  color: var(--cosmic-success) !important;
+}
+
+.dark .rn-clr-content-warning,
+.dark .rn-clr-content-state-warning {
+  color: var(--cosmic-warning) !important;
+}
+
+.dark .rn-clr-content-negative {
+  color: var(--cosmic-destructive) !important;
+}
+
+.dark .rn-clr-content-state-disabled {
+  color: var(--cosmic-text-muted) !important;
+}
+
+.dark .rn-clr-border-opaque {
+  border-color: var(--cosmic-divider) !important;
+}
+
+.dark .rn-clr-border-selected {
+  border-color: var(--cosmic-border) !important;
+}
+
+.dark .rn-clr-border-accent,
+.dark .rn-clr-border-accent-light {
+  border-color: var(--cosmic-accent) !important;
+}
+
+.dark .rn-clr-border-light-accent {
+  border-color: var(--cosmic-accent-soft) !important;
+}
+
+.dark .rn-clr-border-positive {
+  border-color: var(--cosmic-success) !important;
+}
+
+.dark .rn-clr-border-warning {
+  border-color: var(--cosmic-warning) !important;
+}
+
+.dark .rn-clr-border-negative {
+  border-color: var(--cosmic-destructive) !important;
+}
+
+.dark .rn-divider {
+  background-color: var(--cosmic-divider) !important;
+}
+
+.dark #document-sidebar,
+.dark .rn-sidebar,
+.dark .rn-document-sidebar,
+.dark .rn-document-sidebar1 {
+  background-color: var(--cosmic-primary) !important;
+}
+
+.dark .rn-pane__top-bar,
+.dark .rn-pane__body,
+.dark .top-bar-container,
+.dark .rn-navigation-bar,
+.dark .rn-sticky-header {
+  background-color: var(--cosmic-bg) !important;
+}
+
+.dark .rn-omnibar,
+.dark div[data-cy="omnibar"],
+.dark .rn-menu,
+.dark .rn-popup,
+.dark .rn-popup-background,
+.dark .rn-dialog,
+.dark .rn-dialog-background,
+.dark .rn-floating-toolbar,
+.dark .rn-floating-toolbar-wrapper,
+.dark .rn-doc-menu,
+.dark .rn-clr-shadow-menu {
+  background-color: var(--cosmic-secondary) !important;
+  color: var(--cosmic-text) !important;
+}
+
+.dark .rn-popup__content {
+  background-color: var(--cosmic-secondary) !important;
+}
+
+.dark .rn-background-toolbar {
+  background-color: var(--cosmic-component) !important;
+}
+
+.dark .rn-button {
+  color: var(--cosmic-text-2) !important;
+  background-color: rgba(158, 158, 158, 0.25) !important;
+  border-radius: var(--cosmic-radius-s) !important;
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.dark .rn-button:hover {
+  background-color: rgba(99, 99, 99, 0.4) !important;
+  color: var(--cosmic-text) !important;
+}
+
+.dark .rn-button--primary,
+.dark .rn-button.rn-button--primary,
+.dark .rn-primary {
+  background-color: var(--cosmic-accent) !important;
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark .rn-button--primary:hover,
+.dark .rn-button.rn-button--primary:hover {
+  background-color: var(--cosmic-accent-hover) !important;
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark .rn-button--primary:active,
+.dark .rn-button.rn-button--primary:active {
+  background-color: var(--cosmic-accent-pressed) !important;
+}
+
+.dark .rn-switch {
+  background-color: var(--cosmic-component) !important;
+}
+
+.dark .rn-switch[data-state="checked"] {
+  background-color: var(--cosmic-accent-soft) !important;
+  border-color: var(--cosmic-accent) !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+}
+
+.dark .rn-switch-handle {
+  background-color: var(--cosmic-text-2) !important;
+}
+
+.dark .rn-switch[data-state="checked"] .rn-switch-handle {
+  background-color: var(--cosmic-accent) !important;
+}
+
+.dark .rn-checkbox--checked {
+  background-color: var(--cosmic-accent) !important;
+  border-color: var(--cosmic-accent) !important;
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark .rn-checkbox--unchecked {
+  border-color: var(--cosmic-border) !important;
+  background-color: var(--cosmic-component) !important;
+}
+
+.dark .rn-rem-reference,
+.dark .text-blue-60,
+.dark .text-blue-80,
+.dark a {
+  color: var(--cosmic-accent) !important;
+}
+
+.dark .rn-settings__link.rn-clr-content-accent {
+  color: var(--cosmic-accent) !important;
+}
+
+.dark .rn-settings__link:hover {
+  background-color: var(--cosmic-hover) !important;
+  border-radius: var(--cosmic-radius-xs);
+}
+
+.dark .rn-queue {
+  background-color: var(--cosmic-bg) !important;
+}
+
+.dark .rn-queue-container {
+  background-color: var(--cosmic-primary) !important;
+}
+
+.dark .rn-tag,
+.dark .rn-tag-container .rn-tag {
+  background-color: var(--cosmic-component) !important;
+  color: var(--cosmic-text) !important;
+  border-radius: var(--cosmic-radius-xs);
+}
+
+.dark .rn-work-in-progress-rem,
+.dark .rn-work-in-progress-tag,
+.dark .rn-work-in-progress-portal {
+  background-color: var(--cosmic-component) !important;
+  color: var(--cosmic-text) !important;
+  border-radius: var(--cosmic-radius-xs);
+}
+
+.dark .highlight-color--red {
+  background-color: rgba(253, 161, 160, var(--tw-bg-opacity-highlight)) !important;
+}
+
+.dark .highlight-color--orange {
+  background-color: rgba(255, 173, 0, var(--tw-bg-opacity-highlight)) !important;
+}
+
+.dark .highlight-color--yellow {
+  background-color: rgba(247, 224, 98, var(--tw-bg-opacity-highlight)) !important;
+}
+
+.dark .highlight-color--blue {
+  background-color: rgba(99, 208, 223, var(--tw-bg-opacity-highlight)) !important;
+}
+
+.dark .highlight-color--purple {
+  background-color: rgba(231, 156, 254, var(--tw-bg-opacity-highlight)) !important;
+}
+
+.dark .highlight-color--green {
+  background-color: rgba(146, 207, 156, var(--tw-bg-opacity-highlight)) !important;
+}
+
+.dark .hover\:rn-clr-background--hovered:hover,
+.dark .rn-clr-background--hovered {
+  background-color: var(--cosmic-hover) !important;
+}
+
+.dark .hover\:rn-clr-background-light-accent--hovered:hover,
+.dark .hover\:rn-clr-background-light-accent--hovered {
+  background-color: var(--cosmic-accent) !important;
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark [data-cy-active="true"] {
+  border-bottom-color: var(--cosmic-accent) !important;
+}
+
+.dark #search-results__result {
+  color: var(--cosmic-text);
+  border-radius: var(--cosmic-radius-xs);
+}
+
+.dark #search-results__result[data-cmdopt-selected="true"],
+.dark #search-results__result.rn-clr-background--hovered {
+  background-color: var(--cosmic-accent-mid) !important;
+}
+
+.dark .rn-progress-bar {
+  background-color: var(--cosmic-component) !important;
+}
+
+.dark .mosaic-tile {
+  border-color: var(--cosmic-divider) !important;
+}
+
+.dark .bg-gray-0 {
+  background-color: var(--cosmic-primary) !important;
+}
+
+.dark .bg-gray-5 {
+  background-color: var(--cosmic-bg) !important;
+}
+
+.dark .bg-primary-70 {
+  background-color: var(--cosmic-accent) !important;
+  color: var(--cosmic-on-accent) !important;
+}
+
+.dark .border-gray-15,
+.dark .border-gray-20 {
+  border-color: var(--cosmic-divider) !important;
+}
+
+.dark .text-gray-30 {
+  color: var(--cosmic-text-3) !important;
+}
+
+.dark .text-gray-100 {
+  color: var(--cosmic-text) !important;
+}
+
+.dark .text-green-60 {
+  color: var(--cosmic-success) !important;
+}
+
+.dark svg[data-icon="learning-state-active"] path {
+  fill: var(--cosmic-success);
+}
+
+.dark svg[data-icon="learning-state-maintaining"] path {
+  stroke: var(--cosmic-accent);
+}
+
+.dark svg[data-icon="learning-state-maintaining"] circle {
+  fill: var(--cosmic-accent);
+}
+
+.dark svg[data-icon="learning-state-paused"] path {
+  stroke: var(--cosmic-text-muted);
+}
+
+.dark svg[data-icon="learning-state-no-priority"] path {
+  stroke: var(--cosmic-text-3);
+}
+
+.dark svg[data-icon="rem-document-dark"] path[fill="#202024"],
+.dark svg[data-icon="rem-folder-dark"] path[fill="#202024"],
+.dark svg[data-icon="rem-pdf-dark"] path[fill="#202024"],
+.dark svg[data-icon="rem-top-level-rem-dark"] path[fill="#202024"] {
+  fill: var(--cosmic-primary);
+}
+
+.dark svg[data-icon="rem-document-dark"] path[stroke="#53535B"],
+.dark svg[data-icon="rem-folder-dark"] path[stroke="#53535B"],
+.dark svg[data-icon="rem-pdf-dark"] path[stroke="#53535B"],
+.dark svg[data-icon="rem-top-level-rem-dark"] path[stroke="#53535B"],
+.dark svg[data-icon="rem-document-dark"] path[fill="#53535B"],
+.dark svg[data-icon="rem-folder-dark"] path[fill="#53535B"],
+.dark svg[data-icon="rem-pdf-dark"] path[fill="#53535B"],
+.dark svg[data-icon="rem-top-level-rem-dark"] path[fill="#53535B"] {
+  stroke: var(--cosmic-border);
+  fill: var(--cosmic-border);
+}
+
+.dark rect[fill="#202024"] {
+  fill: var(--cosmic-primary);
+}
+
+.dark *:focus-visible {
+  outline-color: var(--cosmic-accent);
+}
+
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #636363;
+  border-radius: var(--cosmic-radius-s);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #808080;
+}
+
+@media (max-width: 768px) {
+  .dark .rn-queue-container,
+  .dark .rn-queue {
+    background-color: var(--cosmic-bg) !important;
+  }
+}

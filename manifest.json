@@ -1,0 +1,17 @@
+{
+  "manifestVersion": 1,
+  "id": "cosmic-dark",
+  "name": "COSMIC Dark",
+  "author": "leowajda",
+  "repoUrl": "https://github.com/leowajda/zibaldone",
+  "version": {
+    "major": 0,
+    "minor": 1,
+    "patch": 0
+  },
+  "theme": ["dark"],
+  "enableOnMobile": true,
+  "description": "System76 COSMIC dark theme with yellow accent for RemNote.",
+  "requestNative": false,
+  "requiredScopes": []
+}
