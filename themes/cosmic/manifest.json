@@ -9,10 +9,7 @@
     "minor": 3,
     "patch": 0
   },
-  "theme": [
-    "light",
-    "dark"
-  ],
+  "theme": ["light", "dark"],
   "enableOnMobile": true,
   "description": "System76 COSMIC light and dark for RemNote. Matches the desktop palettes with a yellow accent.",
   "requestNative": false,

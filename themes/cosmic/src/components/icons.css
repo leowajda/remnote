@@ -1,0 +1,46 @@
+svg[data-icon="learning-state-active"] path {
+  fill: var(--cosmic-success);
+}
+
+svg[data-icon="learning-state-maintaining"] path {
+  stroke: var(--cosmic-accent);
+}
+
+svg[data-icon="learning-state-maintaining"] circle {
+  fill: var(--cosmic-accent);
+}
+
+svg[data-icon="learning-state-paused"] path {
+  stroke: var(--cosmic-text-muted);
+}
+
+svg[data-icon="learning-state-no-priority"] path {
+  stroke: var(--cosmic-text-3);
+}
+
+svg[data-icon="rem-document-dark"] path[fill="#202024"],
+svg[data-icon="rem-folder-dark"] path[fill="#202024"],
+svg[data-icon="rem-pdf-dark"] path[fill="#202024"],
+svg[data-icon="rem-top-level-rem-dark"] path[fill="#202024"],
+svg[data-icon="rem-document-light"] path[fill="#FCFCFF"],
+svg[data-icon="rem-folder-light"] path[fill="#FCFCFF"],
+svg[data-icon="rem-pdf-light"] path[fill="#FCFCFF"],
+svg[data-icon="rem-top-level-rem-light"] path[fill="#FCFCFF"] {
+  fill: var(--cosmic-primary);
+}
+
+svg[data-icon="rem-document-dark"] path[stroke="#53535B"],
+svg[data-icon="rem-folder-dark"] path[stroke="#53535B"],
+svg[data-icon="rem-pdf-dark"] path[stroke="#53535B"],
+svg[data-icon="rem-top-level-rem-dark"] path[stroke="#53535B"],
+svg[data-icon="rem-document-dark"] path[fill="#53535B"],
+svg[data-icon="rem-folder-dark"] path[fill="#53535B"],
+svg[data-icon="rem-pdf-dark"] path[fill="#53535B"],
+svg[data-icon="rem-top-level-rem-dark"] path[fill="#53535B"],
+svg[data-icon="rem-document-light"] path[stroke="#CACAD9"],
+svg[data-icon="rem-folder-light"] path[stroke="#CACAD9"],
+svg[data-icon="rem-pdf-light"] path[stroke="#CACAD9"],
+svg[data-icon="rem-top-level-rem-light"] path[stroke="#CACAD9"] {
+  stroke: var(--cosmic-border);
+  fill: var(--cosmic-border);
+}

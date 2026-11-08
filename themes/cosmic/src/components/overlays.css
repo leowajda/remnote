@@ -1,0 +1,60 @@
+.rn-omnibar,
+div[data-cy="omnibar"],
+.rn-clr-shadow-menu,
+.rn-menu,
+.rn-popup,
+.rn-popup-background,
+.rn-popup__content,
+.rn-dialog,
+.rn-dialog-background,
+.rn-floating-toolbar,
+.rn-doc-menu,
+.rn-paste-popup,
+.rn-sort-popup {
+  background-color: var(--cosmic-secondary);
+  color: var(--cosmic-text);
+}
+
+.rn-background-toolbar {
+  background-color: var(--cosmic-component);
+}
+
+[id="search-results__list"] {
+  background-color: var(--cosmic-secondary);
+}
+
+[id="search-results__list"],
+[id="search-results__controls"],
+[id="search-results__no-results"] {
+  color: var(--cosmic-text);
+}
+
+[id="search-results__list"] .rn-clr-background--hovered,
+[id="search-results__list"] [aria-selected="true"] {
+  background-color: var(--cosmic-accent-mid);
+  border-radius: var(--cosmic-radius-xs);
+}
+
+[data-cy-active="true"] {
+  border-bottom-color: var(--cosmic-accent);
+}
+
+.rn-toast,
+.rn-toast-container {
+  background-color: var(--cosmic-secondary);
+  color: var(--cosmic-text);
+}
+
+.rn-floating-toolbar-wrapper {
+  background-color: transparent;
+}
+
+.rn-dialog-overlay {
+  background-color: var(--rn-clr-background-overlay-dark);
+}
+
+.rn-search,
+.rn-ctrl-f {
+  background-color: var(--cosmic-secondary);
+  color: var(--cosmic-text);
+}

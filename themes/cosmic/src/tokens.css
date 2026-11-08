@@ -1,0 +1,200 @@
+/* COSMIC palette primitives and semantic colors. */
+:root,
+.light {
+  --cosmic-gray-0: #fff;
+  --cosmic-gray-90-host: #1b1b1b;
+  --cosmic-always-dark: #1b1b1b;
+  --cosmic-always-light: #fff;
+  --cosmic-gray-1: #eee;
+  --cosmic-gray-2: #e4e4e4;
+  --cosmic-gray-3: #e2e2e2;
+  --cosmic-gray-4: #ddd;
+  --cosmic-gray-5: #d1d6d6;
+  --cosmic-gray-6: #919191;
+  --cosmic-gray-7: #777;
+  --cosmic-gray-8: #5e5e5e;
+  --cosmic-gray-9: #474747;
+  --cosmic-gray-10: #000;
+  --cosmic-hover: #e7e7e7;
+  --cosmic-pressed: #e9e9e9;
+  --cosmic-border: #161616;
+  --cosmic-text: #193131;
+  --cosmic-text-bright: #000;
+  --cosmic-text-2: #071f20;
+  --cosmic-button-ink: #2e2e2e;
+  --cosmic-button-ink-hover: #2b2b2b;
+  --cosmic-inverse-bg: #1b1b1b;
+  --cosmic-inverse-bg-2: #272727;
+  --cosmic-inverse-text: #e7e7e7;
+  --cosmic-inverse-text-2: #c0c0c0;
+  --cosmic-inverse-text-3: #9e9e9e;
+  --cosmic-accent: #d7b43b;
+  --cosmic-accent-hover: #c0a443;
+  --cosmic-accent-pressed: #cab97c;
+  --cosmic-accent-text: #695400;
+  --cosmic-on-accent: #000;
+  --cosmic-accent-soft: color-mix(
+    in srgb,
+    var(--cosmic-accent) 14%,
+    transparent
+  );
+  --cosmic-accent-mid: color-mix(
+    in srgb,
+    var(--cosmic-accent) 40%,
+    transparent
+  );
+  --cosmic-success: #185529;
+  --cosmic-success-on: #fff;
+  --cosmic-success-soft: color-mix(
+    in srgb,
+    var(--cosmic-success) 18%,
+    transparent
+  );
+  --cosmic-warning: #534800;
+  --cosmic-warning-on: #fff;
+  --cosmic-warning-soft: color-mix(
+    in srgb,
+    var(--cosmic-warning) 18%,
+    transparent
+  );
+  --cosmic-destructive: #78292e;
+  --cosmic-destructive-on: #fff;
+  --cosmic-destructive-soft: color-mix(
+    in srgb,
+    var(--cosmic-destructive) 18%,
+    transparent
+  );
+  --cosmic-blue: #00525a;
+  --cosmic-indigo: #2e496d;
+  --cosmic-purple: #68217c;
+  --cosmic-pink: #86043a;
+  --cosmic-red: #78292e;
+  --cosmic-orange: #624000;
+  --cosmic-yellow: #534800;
+  --cosmic-green: #185529;
+  --cosmic-highlight-red: #890418;
+  --cosmic-highlight-orange: #792c00;
+  --cosmic-highlight-yellow: #f7e062;
+  --cosmic-highlight-blue: #6acad8;
+  --cosmic-highlight-purple: #d58cff;
+  --cosmic-highlight-green: #00572c;
+  --cosmic-radius-xs: 4px;
+  --cosmic-radius-s: 8px;
+  --cosmic-radius-m: 16px;
+  --cosmic-bg: var(--cosmic-gray-0);
+  --cosmic-bg-2: var(--cosmic-gray-1);
+  --cosmic-primary: var(--cosmic-gray-1);
+  --cosmic-secondary: var(--cosmic-gray-4);
+  --cosmic-component: var(--cosmic-gray-2);
+  --cosmic-divider: var(--cosmic-gray-5);
+  --cosmic-text-3: var(--cosmic-gray-8);
+  --cosmic-text-muted: var(--cosmic-gray-7);
+  --cosmic-button: color-mix(
+    in srgb,
+    var(--cosmic-button-ink) 25%,
+    transparent
+  );
+  --cosmic-button-hover: color-mix(
+    in srgb,
+    var(--cosmic-button-ink-hover) 40%,
+    transparent
+  );
+  --cosmic-button-on: var(--cosmic-text-2);
+}
+
+.dark {
+  --cosmic-gray-0: #1b1b1b;
+  --cosmic-gray-90-host: #dedede;
+  --cosmic-gray-1: #262626;
+  --cosmic-gray-2: #272727;
+  --cosmic-gray-3: #2e2e2e;
+  --cosmic-gray-4: #343434;
+  --cosmic-gray-5: #484848;
+  --cosmic-gray-6: #636363;
+  --cosmic-gray-7: #808080;
+  --cosmic-gray-8: #9e9e9e;
+  --cosmic-gray-9: #c0c0c0;
+  --cosmic-gray-10: #fff;
+  --cosmic-accent: #d7b43b;
+  --cosmic-accent-hover: #c0a443;
+  --cosmic-accent-pressed: #a58a2d;
+  --cosmic-accent-text: #d7b43b;
+  --cosmic-on-accent: #000;
+  --cosmic-accent-soft: color-mix(
+    in srgb,
+    var(--cosmic-accent) 14%,
+    transparent
+  );
+  --cosmic-accent-mid: color-mix(
+    in srgb,
+    var(--cosmic-accent) 40%,
+    transparent
+  );
+  --cosmic-success: #5edb8c;
+  --cosmic-success-on: #000;
+  --cosmic-success-soft: color-mix(
+    in srgb,
+    var(--cosmic-success) 18%,
+    transparent
+  );
+  --cosmic-warning: #ffa37d;
+  --cosmic-warning-on: #000;
+  --cosmic-warning-soft: color-mix(
+    in srgb,
+    var(--cosmic-warning) 18%,
+    transparent
+  );
+  --cosmic-destructive: #ffa09a;
+  --cosmic-destructive-on: #000;
+  --cosmic-destructive-soft: color-mix(
+    in srgb,
+    var(--cosmic-destructive) 18%,
+    transparent
+  );
+  --cosmic-blue: #63d0df;
+  --cosmic-indigo: #a1c0eb;
+  --cosmic-purple: #e79cfe;
+  --cosmic-pink: #ff9cb1;
+  --cosmic-red: #fda1a0;
+  --cosmic-orange: #ffad00;
+  --cosmic-yellow: #f7e062;
+  --cosmic-green: #92cf9c;
+  --cosmic-highlight-red: #fda1a0;
+  --cosmic-highlight-orange: #ffad00;
+  --cosmic-highlight-yellow: #f7e062;
+  --cosmic-highlight-blue: #63d0df;
+  --cosmic-highlight-purple: #e79cfe;
+  --cosmic-highlight-green: #92cf9c;
+  --cosmic-bg: var(--cosmic-gray-0);
+  --cosmic-bg-2: var(--cosmic-gray-1);
+  --cosmic-primary: var(--cosmic-gray-2);
+  --cosmic-secondary: var(--cosmic-gray-4);
+  --cosmic-component: var(--cosmic-gray-3);
+  --cosmic-hover: #434343;
+  --cosmic-pressed: #585858;
+  --cosmic-divider: #444;
+  --cosmic-border: #9e9e9e;
+  --cosmic-text: #e7e7e7;
+  --cosmic-text-bright: #fff;
+  --cosmic-text-2: #c0c0c0;
+  --cosmic-text-3: #9e9e9e;
+  --cosmic-text-muted: #808080;
+  --cosmic-button-ink: #9e9e9e;
+  --cosmic-button-ink-hover: #636363;
+  --cosmic-inverse-bg: #fff;
+  --cosmic-inverse-bg-2: #e7e7e7;
+  --cosmic-inverse-text: #1b1b1b;
+  --cosmic-inverse-text-2: #272727;
+  --cosmic-inverse-text-3: #343434;
+  --cosmic-button: color-mix(
+    in srgb,
+    var(--cosmic-button-ink) 25%,
+    transparent
+  );
+  --cosmic-button-hover: color-mix(
+    in srgb,
+    var(--cosmic-button-ink-hover) 40%,
+    transparent
+  );
+  --cosmic-button-on: var(--cosmic-text-2);
+}

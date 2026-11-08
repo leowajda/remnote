@@ -1,0 +1,37 @@
+.rn-table-header,
+.rn-column-header,
+.rn-column-header-non-primary {
+  background-color: var(--cosmic-primary);
+  color: var(--cosmic-text);
+  border-color: var(--cosmic-divider);
+}
+
+.rn-table-row,
+.rn-table-row-container {
+  background-color: var(--cosmic-bg);
+  border-color: var(--cosmic-divider);
+}
+
+.rn-table-add-row,
+.rn-table-add-column,
+.rn-table-add-column-placeholder {
+  background-color: var(--cosmic-bg-2);
+  color: var(--cosmic-text-3);
+}
+
+.rn-table-row-menu,
+.rn-table-column-toolbar-menu {
+  background-color: var(--cosmic-secondary);
+  color: var(--cosmic-text);
+}
+
+.rn-sticky-column-shadow {
+  box-shadow: var(--rn-clr-shadow-default);
+}
+
+.rn-table-row-six-dot-menu,
+.rn-table-row-for-sticky,
+.rn-row-open-button {
+  background-color: var(--cosmic-bg);
+  color: var(--cosmic-text-2);
+}

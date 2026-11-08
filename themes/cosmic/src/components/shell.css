@@ -1,0 +1,81 @@
+[id="document-sidebar"],
+.rn-sidebar,
+.rn-document-sidebar {
+  background-color: var(--cosmic-primary);
+}
+
+.rn-document-sidebar__top-link.rn-clr-background-light-accent {
+  background-color: var(--cosmic-accent-soft);
+}
+
+.rn-sidebar-counter {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text-2);
+}
+
+[id="document-sidebar__account-capsule"],
+.rn-account-capsule {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text);
+}
+
+.rn-add-button,
+.rn-add-document-button {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text);
+}
+
+.rn-pane__top-bar,
+.rn-pane__body,
+.top-bar-container,
+.rn-navigation-bar,
+.rn-sticky-header {
+  background-color: var(--cosmic-bg);
+}
+
+.mosaic-tile {
+  border-color: var(--cosmic-divider);
+
+  --current-background-color: var(--cosmic-bg);
+}
+
+.rn-divider {
+  background-color: var(--cosmic-divider);
+}
+
+.rn-doc-header,
+.rn-article-header,
+.rn-document-wrapper,
+.rn-pane,
+.rn-fast-rem-container,
+.rn-fast-rem-editor-container {
+  background-color: var(--cosmic-bg);
+}
+
+.rn-date-header-item,
+.rn-day-with-rem {
+  color: var(--cosmic-text-2);
+}
+
+.rn-sidebar-flashcards-link,
+.rn-document-preview {
+  color: var(--cosmic-text);
+}
+
+.rn-column-resize-handle {
+  background-color: var(--cosmic-divider);
+}
+
+.rn-left-sidebar-onboarding,
+.rn-left-sidebar-onboarding-search-box,
+.rn-left-sidebar-tutorial-goal {
+  background-color: var(--cosmic-primary);
+  color: var(--cosmic-text);
+}
+
+.rn-page-header-mobile,
+.rn-mobile-sync-status,
+.rn-platform {
+  background-color: var(--cosmic-bg);
+  color: var(--cosmic-text);
+}

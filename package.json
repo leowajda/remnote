@@ -1,0 +1,16 @@
+{
+  "name": "remnote",
+  "private": true,
+  "workspaces": [
+    "themes/*",
+    "plugins/*"
+  ],
+  "engines": {
+    "node": ">=24 <27"
+  },
+  "scripts": {
+    "check": "npm run check --workspaces",
+    "test": "npm test --workspaces",
+    "build": "npm run build --workspaces"
+  }
+}

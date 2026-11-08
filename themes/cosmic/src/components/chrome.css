@@ -1,0 +1,29 @@
+::selection {
+  background-color: var(--cosmic-accent-mid);
+  color: var(--cosmic-text-bright);
+}
+
+.rn-button:focus-visible,
+.rn-switch:focus-visible,
+.rn-checkbox:focus-visible {
+  outline: 2px solid var(--cosmic-accent-text);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--cosmic-gray-6);
+  border-radius: var(--cosmic-radius-s);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--cosmic-gray-7);
+}

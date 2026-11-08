@@ -1,0 +1,13 @@
+@import url("tokens.css");
+@import url("remnote.css");
+@import url("components/shell.css");
+@import url("components/editor.css");
+@import url("components/study.css");
+@import url("components/overlays.css");
+@import url("components/settings.css");
+@import url("components/reader.css");
+@import url("components/tables.css");
+@import url("components/highlights.css");
+@import url("components/controls.css");
+@import url("components/icons.css");
+@import url("components/chrome.css");

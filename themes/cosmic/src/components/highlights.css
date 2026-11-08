@@ -1,0 +1,64 @@
+.highlight-color--red,
+.rn-editor__rem__body--red {
+  background-color: color-mix(
+    in srgb,
+    var(--cosmic-highlight-red) 22%,
+    transparent
+  );
+}
+
+.highlight-color--orange,
+.rn-editor__rem__body--orange {
+  background-color: color-mix(
+    in srgb,
+    var(--cosmic-highlight-orange) 22%,
+    transparent
+  );
+}
+
+.highlight-color--yellow,
+.rn-editor__rem__body--yellow {
+  background-color: color-mix(
+    in srgb,
+    var(--cosmic-highlight-yellow) 22%,
+    transparent
+  );
+}
+
+.highlight-color--blue,
+.rn-editor__rem__body--blue {
+  background-color: color-mix(
+    in srgb,
+    var(--cosmic-highlight-blue) 22%,
+    transparent
+  );
+}
+
+.highlight-color--purple,
+.rn-editor__rem__body--purple {
+  background-color: color-mix(
+    in srgb,
+    var(--cosmic-highlight-purple) 22%,
+    transparent
+  );
+}
+
+.highlight-color--green,
+.rn-editor__rem__body--green {
+  background-color: color-mix(
+    in srgb,
+    var(--cosmic-highlight-green) 22%,
+    transparent
+  );
+}
+
+.cloze {
+  color: var(--cosmic-accent-text);
+  text-decoration: underline;
+  text-decoration-color: var(--cosmic-accent);
+  background-color: var(--cosmic-accent-soft);
+}
+
+.rich-text-editor__change-cloze-button {
+  background-color: transparent;
+}

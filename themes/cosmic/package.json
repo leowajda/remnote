@@ -1,0 +1,41 @@
+{
+  "name": "@remnote/cosmic",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev/preview --host 127.0.0.1 --port 4173 --strictPort",
+    "dev:remnote": "node scripts/serve-remnote.ts",
+    "format": "prettier --write src dev scripts tests *.json *.ts *.mjs",
+    "format:check": "prettier --check src dev scripts tests *.json *.ts *.mjs",
+    "lint": "stylelint \"src/**/*.css\" \"dev/preview/**/*.css\" --max-warnings 0 && eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "node --test tests/unit/*.test.ts",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test:unit",
+    "test": "playwright test",
+    "test:update": "playwright test --update-snapshots",
+    "build": "npm run check && node scripts/build.ts",
+    "verify": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.65.0",
+    "@remnote/plugin-sdk": "0.0.46",
+    "@types/node": "26.6.6",
+    "@types/postcss-import": "14.0.3",
+    "ajv": "8.20.0",
+    "esbuild": "0.28.2",
+    "eslint": "10.14.0",
+    "fflate": "0.8.3",
+    "globals": "17.14.0",
+    "postcss": "8.5.32",
+    "postcss-import": "17.0.1",
+    "postcss-selector-parser": "7.1.7",
+    "postcss-value-parser": "4.2.0",
+    "prettier": "3.9.10",
+    "stylelint": "18.0.0",
+    "stylelint-config-standard": "41.0.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1",
+    "vite": "8.3.6"
+  }
+}

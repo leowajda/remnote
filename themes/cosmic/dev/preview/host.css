@@ -1,0 +1,25 @@
+/* Minimal host utility stand-ins for this synthetic fixture; values come from COSMIC's rn-clr aliases. */
+.rn-notification-banner {
+  background-color: var(--rn-clr-background-secondary);
+  color: var(--rn-clr-content-primary);
+}
+
+.rn-clr-background-primary {
+  background-color: var(--rn-clr-background-primary);
+}
+
+.rn-clr-background-secondary {
+  background-color: var(--rn-clr-background-secondary);
+}
+
+.rn-clr-background-light-accent {
+  background-color: var(--rn-clr-background-light-accent);
+}
+
+.rn-clr-background-light-warning {
+  background-color: var(--rn-clr-background-light-warning);
+}
+
+.rn-clr-content-primary {
+  color: var(--rn-clr-content-primary);
+}
