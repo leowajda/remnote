@@ -1,0 +1,190 @@
+/* RemNote host token aliases. Shared bindings resolve against the active palette. */
+/* stylelint-disable custom-property-pattern -- RemNote exposes these host variable names as its CSS API. */
+:root,
+.light.light,
+.dark.dark {
+  --rn-clr-background: var(--cosmic-bg);
+  --rn-clr-background-primary: var(--cosmic-bg);
+  --rn-clr-background-secondary: var(--cosmic-primary);
+  --rn-clr-background-tertiary: var(--cosmic-secondary);
+  --rn-clr-background-accent: var(--cosmic-accent);
+  --rn-clr-background-light-accent: var(--cosmic-accent-soft);
+  --rn-clr-background-elevation-5: var(--cosmic-bg);
+  --rn-clr-background-elevation-10: var(--cosmic-bg-2);
+  --rn-clr-background-elevation-15: var(--cosmic-primary);
+  --rn-clr-background-elevation-20: var(--cosmic-component);
+  --rn-clr-background-elevation-30: var(--cosmic-secondary);
+  --rn-clr-background-elevation-40: var(--cosmic-hover);
+  --rn-clr-background-elevation-50: var(--cosmic-hover);
+  --rn-clr-background-elevation-60: var(--cosmic-pressed);
+  --rn-clr-background-elevation-70: var(--cosmic-pressed);
+  --rn-clr-background-elevation-80: var(--cosmic-pressed);
+  --rn-clr-background-elevation-90: var(--cosmic-pressed);
+  --rn-clr-background-elevation-100: var(--cosmic-pressed);
+  --rn-clr-background-positive: var(--cosmic-success);
+  --rn-clr-background-warning: var(--cosmic-warning);
+  --rn-clr-background-negative: var(--cosmic-destructive);
+  --rn-clr-background-light-positive: var(--cosmic-success-soft);
+  --rn-clr-background-light-warning: var(--cosmic-warning-soft);
+  --rn-clr-background-light-negative: var(--cosmic-destructive-soft);
+  --rn-clr-background-state-disabled: color-mix(
+    in srgb,
+    var(--cosmic-component) 50%,
+    transparent
+  );
+  --rn-clr-background-overlay-dark: rgb(0 0 0 / 45%);
+  --rn-clr-background-overlay-light: rgb(255 255 255 / 72%);
+  --rn-clr-background-inverse-primary: var(--cosmic-inverse-bg);
+  --rn-clr-background-inverse-secondary: var(--cosmic-inverse-bg-2);
+  --rn-clr-background-always-dark: var(--cosmic-always-dark);
+  --rn-clr-background-always-light: var(--cosmic-always-light);
+  --rn-clr-background-logo-color: var(--cosmic-accent);
+  --rn-clr-content-primary: var(--cosmic-text);
+  --rn-clr-content-secondary: var(--cosmic-text-2);
+  --rn-clr-content-tertiary: var(--cosmic-text-3);
+  --rn-clr-content-second: var(--cosmic-text-2);
+  --rn-clr-content-accent: var(--cosmic-accent-text);
+  --rn-clr-content-on-color: var(--cosmic-on-accent);
+  --rn-clr-content-on-color-inverse: var(--cosmic-inverse-text);
+  --rn-clr-content-positive: var(--cosmic-success);
+  --rn-clr-content-warning: var(--cosmic-warning);
+  --rn-clr-content-negative: var(--cosmic-destructive);
+  --rn-clr-content-state-disabled: var(--cosmic-text-muted);
+  --rn-clr-content-state-warning: var(--cosmic-warning);
+  --rn-clr-content-inverse-primary: var(--cosmic-inverse-text);
+  --rn-clr-content-inverse-secondary: var(--cosmic-inverse-text-2);
+  --rn-clr-content-inverse-tertiary: var(--cosmic-inverse-text-3);
+  --rn-clr-content-logo-color: var(--cosmic-accent);
+  --rn-clr-border-opaque: var(--cosmic-divider);
+  --rn-clr-border-selected: var(--cosmic-border);
+  --rn-clr-border-accent: var(--cosmic-accent);
+  --rn-clr-border-accent-light: var(--cosmic-accent-hover);
+  --rn-clr-border-light-accent: var(--cosmic-accent-soft);
+  --rn-clr-border-positive: var(--cosmic-success);
+  --rn-clr-border-warning: var(--cosmic-warning);
+  --rn-clr-border-negative: var(--cosmic-destructive);
+  --rn-clr-border-state-disabled: color-mix(
+    in srgb,
+    var(--cosmic-border) 35%,
+    transparent
+  );
+  --rn-clr-border-inverse-opaque: var(--cosmic-inverse-text-3);
+  --rn-clr-border-inverse-selected: var(--cosmic-inverse-text-2);
+  --rn-clr-shadow-default: 0 1px 2px rgb(0 0 0 / 8%);
+  --rn-clr-shadow-card: 0 2px 8px rgb(0 0 0 / 8%);
+  --rn-clr-shadow-menu: 0 4px 16px rgb(0 0 0 / 12%);
+  --rn-clr-shadow-modal: 0 8px 32px rgb(0 0 0 / 16%);
+  --rn-clr-shadow-close-keyboard-menu: 0 -4px 16px rgb(0 0 0 / 12%);
+  --rn-clr-shadow-elevation-5: 0 1px 2px rgb(0 0 0 / 6%);
+  --rn-clr-shadow-elevation-10: 0 2px 4px rgb(0 0 0 / 8%);
+  --rn-clr-shadow-elevation-15: 0 3px 6px rgb(0 0 0 / 9%);
+  --rn-clr-shadow-elevation-20: 0 4px 8px rgb(0 0 0 / 10%);
+  --rn-clr-shadow-elevation-30: 0 6px 12px rgb(0 0 0 / 12%);
+  --rn-clr-shadow-elevation-40: 0 8px 16px rgb(0 0 0 / 14%);
+  --rn-clr-shadow-elevation-50: 0 12px 24px rgb(0 0 0 / 16%);
+  --rn-colors-gray-0: var(--cosmic-gray-0);
+  --rn-colors-gray-5: var(--cosmic-gray-1);
+  --rn-colors-gray-10: var(--cosmic-gray-2);
+  --rn-colors-gray-15: var(--cosmic-gray-3);
+  --rn-colors-gray-20: var(--cosmic-gray-4);
+  --rn-colors-gray-30: var(--cosmic-gray-8);
+  --rn-colors-gray-40: var(--cosmic-gray-8);
+  --rn-colors-gray-50: var(--cosmic-gray-7);
+  --rn-colors-gray-60: var(--cosmic-gray-8);
+  --rn-colors-gray-70: var(--cosmic-gray-9);
+  --rn-colors-gray-80: var(--cosmic-text);
+  --rn-colors-gray-90: var(--cosmic-gray-90-host);
+  --rn-colors-gray-100: var(--cosmic-gray-10);
+  --rn-colors-gray-0-val: 255 255 255;
+  --rn-colors-gray-5-val: 238 238 238;
+  --rn-colors-gray-10-val: 228 228 228;
+  --rn-colors-gray-15-val: 226 226 226;
+  --rn-colors-gray-20-val: 221 221 221;
+  --rn-colors-gray-30-val: 94 94 94;
+  --rn-colors-gray-40-val: 94 94 94;
+  --rn-colors-gray-50-val: 119 119 119;
+  --rn-colors-gray-60-val: 94 94 94;
+  --rn-colors-gray-70-val: 71 71 71;
+  --rn-colors-gray-80-val: 25 49 49;
+  --rn-colors-gray-90-val: 27 27 27;
+  --rn-colors-gray-100-val: 0 0 0;
+  --rn-colors-blue-60: var(--cosmic-blue);
+  --rn-colors-blue-80: var(--cosmic-accent-text);
+  --rn-colors-blue-0-val: 228 242 243;
+  --rn-colors-blue-5-val: 204 228 230;
+  --rn-colors-blue-20-val: 0 82 90;
+  --rn-colors-blue-50-val: 0 82 90;
+  --rn-colors-blue-60-val: 0 82 90;
+  --rn-colors-red-0-val: 248 232 233;
+  --rn-colors-red-5-val: 240 210 212;
+  --rn-colors-red-50-val: 120 41 46;
+  --rn-colors-red-60-val: 120 41 46;
+  --rn-colors-mint-5-val: 209 232 216;
+  --rn-colors-mint-60-val: 24 85 41;
+  --rn-colors-cyan-5-val: 204 228 230;
+  --rn-colors-cyan-10-val: 0 82 90;
+  --rn-colors-cyan-100-val: 0 40 44;
+  --rn-colors-amber-50-val: 105 84 0;
+  --rn-colors-yellow-50-val: 215 180 59;
+  --rn-colors-white: var(--cosmic-gray-0);
+  --rn-colors-black: var(--cosmic-gray-10);
+  --highlight-color-red: var(--cosmic-highlight-red);
+  --highlight-color-orange: var(--cosmic-highlight-orange);
+  --highlight-color-yellow: var(--cosmic-highlight-yellow);
+  --highlight-color-blue: var(--cosmic-highlight-blue);
+  --highlight-color-purple: var(--cosmic-highlight-purple);
+  --highlight-color-green: var(--cosmic-highlight-green);
+  --bg-mint-20: var(--cosmic-green);
+  --bg-purple-20: var(--cosmic-purple);
+  --bg-cyan-20: var(--cosmic-blue);
+  --bg-yellow-20: var(--cosmic-yellow);
+  --bg-orange-20: var(--cosmic-orange);
+  --bg-red-20: var(--cosmic-red);
+  --tw-bg-opacity-highlight: 0.22;
+}
+/* stylelint-enable custom-property-pattern */
+
+/* Only host tokens whose values differ by mode are repeated here. */
+.dark.dark {
+  --rn-clr-shadow-default: 0 1px 2px rgb(0 0 0 / 28%);
+  --rn-clr-shadow-card: 0 2px 8px rgb(0 0 0 / 32%);
+  --rn-clr-shadow-menu: 0 4px 16px rgb(0 0 0 / 40%);
+  --rn-clr-shadow-modal: 0 8px 32px rgb(0 0 0 / 48%);
+  --rn-clr-shadow-close-keyboard-menu: 0 -4px 16px rgb(0 0 0 / 40%);
+  --rn-clr-shadow-elevation-5: 0 1px 2px rgb(0 0 0 / 24%);
+  --rn-clr-shadow-elevation-10: 0 2px 4px rgb(0 0 0 / 28%);
+  --rn-clr-shadow-elevation-15: 0 3px 6px rgb(0 0 0 / 30%);
+  --rn-clr-shadow-elevation-20: 0 4px 8px rgb(0 0 0 / 32%);
+  --rn-clr-shadow-elevation-30: 0 6px 12px rgb(0 0 0 / 36%);
+  --rn-clr-shadow-elevation-40: 0 8px 16px rgb(0 0 0 / 40%);
+  --rn-clr-shadow-elevation-50: 0 12px 24px rgb(0 0 0 / 44%);
+  --rn-colors-gray-0-val: 27 27 27;
+  --rn-colors-gray-5-val: 38 38 38;
+  --rn-colors-gray-10-val: 39 39 39;
+  --rn-colors-gray-15-val: 46 46 46;
+  --rn-colors-gray-20-val: 52 52 52;
+  --rn-colors-gray-30-val: 158 158 158;
+  --rn-colors-gray-40-val: 158 158 158;
+  --rn-colors-gray-50-val: 128 128 128;
+  --rn-colors-gray-60-val: 158 158 158;
+  --rn-colors-gray-70-val: 192 192 192;
+  --rn-colors-gray-80-val: 231 231 231;
+  --rn-colors-gray-90-val: 222 222 222;
+  --rn-colors-gray-100-val: 255 255 255;
+  --rn-colors-blue-0-val: 27 40 42;
+  --rn-colors-blue-5-val: 32 64 68;
+  --rn-colors-blue-20-val: 99 208 223;
+  --rn-colors-blue-50-val: 99 208 223;
+  --rn-colors-blue-60-val: 99 208 223;
+  --rn-colors-red-0-val: 48 30 30;
+  --rn-colors-red-5-val: 80 48 47;
+  --rn-colors-red-50-val: 253 161 160;
+  --rn-colors-red-60-val: 253 161 160;
+  --rn-colors-mint-5-val: 40 70 50;
+  --rn-colors-mint-60-val: 94 219 140;
+  --rn-colors-cyan-5-val: 32 64 68;
+  --rn-colors-cyan-10-val: 99 208 223;
+  --rn-colors-cyan-100-val: 227 247 249;
+  --rn-colors-amber-50-val: 215 180 59;
+  --rn-colors-yellow-50-val: 247 224 98;
+}

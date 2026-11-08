@@ -1,0 +1,49 @@
+.rn-all-notes {
+  background-color: var(--cosmic-bg);
+  color: var(--cosmic-text);
+}
+
+.rn-all-notes__row:hover {
+  background-color: var(--cosmic-hover);
+}
+
+.rn-all-notes__row__date {
+  color: var(--cosmic-text-2);
+}
+
+.rn-settings,
+.rn-settings__sidebar,
+.rn-settings__content__top-bar {
+  background-color: var(--cosmic-bg);
+  color: var(--cosmic-text);
+}
+
+.rn-settings__link {
+  color: var(--cosmic-text);
+}
+
+.rn-settings__link.rn-clr-content-accent {
+  color: var(--cosmic-accent-text);
+}
+
+.rn-settings__link:hover {
+  background-color: var(--cosmic-hover);
+  border-radius: var(--cosmic-radius-xs);
+}
+
+.rn-nav-tab-button {
+  color: var(--cosmic-text-2);
+}
+
+.rn-plugin-sidebar,
+.rn-plugin-list,
+.rn-plugin,
+.rn-card {
+  background-color: var(--cosmic-bg-2);
+  color: var(--cosmic-text);
+}
+
+.rn-plugin-root,
+.rn-plugin-logo {
+  color: var(--cosmic-text);
+}

@@ -1,0 +1,27 @@
+name: COSMIC
+on:
+  pull_request:
+    paths: ['themes/cosmic/**', 'package*.json', '.npmrc', '.node-version', '.github/workflows/cosmic.yml']
+  push:
+    paths: ['themes/cosmic/**', 'package*.json', '.npmrc', '.node-version', '.github/workflows/cosmic.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+        working-directory: themes/cosmic
+      - run: npm run verify --workspace=@remnote/cosmic
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: cosmic-test-results
+          path: themes/cosmic/test-results/

@@ -1,17 +1,17 @@
 # Agent guide
 
-Keep changes small and use Conventional Commits. Keep the COSMIC ID `cosmic-dark`; use low-cost agents only for small, independent tasks.
+Keep changes small. Use Conventional Commits. Keep the release ID `cosmic-dark`. Use low-cost agents for bounded tasks.
 
 | Task | Command or reference |
 | --- | --- |
-| Check a theme | `python3 scripts/package.py cosmic --check` |
-| Package a theme | `python3 scripts/package.py cosmic` |
-| Theme files and marketplace page | `themes/cosmic/`; its `README.md` goes in the upload ZIP |
+| Install | `npm ci` (Node 24) |
+| Check COSMIC | `npm run verify --workspace=@remnote/cosmic` |
+| Preview and live testing | [COSMIC development](themes/cosmic/dev/README.md) |
+| Edit CSS | `themes/cosmic/src/`; never edit `dist/` |
+| Theme page | `themes/cosmic/README.md` |
 | CSS and themes | https://plugins.remnote.com/custom-css |
 | Manifest | https://plugins.remnote.com/advanced/manifest |
 | Publishing | https://plugins.remnote.com/advanced/submitting_plugins |
-| Official examples | https://github.com/remnoteio/remnote-official-plugins |
-| Theme examples | https://github.com/catppuccin/remnote · https://github.com/drstrangez0/Remnote-Dracula-theme |
-| Community | https://bit.ly/RemNoteDiscord |
+| Reference | https://github.com/mdeguzis/remnote-sakura-theme |
 
-Read only the references needed for the task. Keep CSS and image changes separate from repository maintenance.
+Keep tooling and tests inside their package. Do not add `!important`. Review screenshot changes. Fixtures do not replace tests in RemNote.

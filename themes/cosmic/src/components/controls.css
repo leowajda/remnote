@@ -1,0 +1,97 @@
+.rn-button {
+  color: var(--cosmic-button-on);
+  background-color: var(--cosmic-button);
+  border-radius: var(--cosmic-radius-s);
+}
+
+.rn-button:hover:not(:disabled) {
+  background-color: var(--cosmic-button-hover);
+  color: var(--cosmic-text);
+}
+
+.rn-button--primary,
+.rn-button.rn-button--primary,
+.rn-primary {
+  background-color: var(--cosmic-accent);
+  color: var(--cosmic-on-accent);
+}
+
+.rn-button--primary:hover:not(:disabled),
+.rn-button.rn-button--primary:hover:not(:disabled) {
+  background-color: var(--cosmic-accent-hover);
+  color: var(--cosmic-on-accent);
+}
+
+.rn-button--primary:active:not(:disabled),
+.rn-button.rn-button--primary:active:not(:disabled) {
+  background-color: var(--cosmic-accent-pressed);
+}
+
+.rn-switch {
+  background-color: var(--cosmic-component);
+}
+
+.rn-switch[data-state="checked"] {
+  background-color: var(--cosmic-accent-soft);
+  border: 2px solid var(--cosmic-accent-text);
+}
+
+.rn-switch-handle {
+  background-color: var(--cosmic-text-2);
+}
+
+.rn-switch[data-state="checked"] .rn-switch-handle {
+  background-color: var(--cosmic-accent-text);
+}
+
+.rn-checkbox--checked {
+  background-color: var(--cosmic-accent);
+  border-color: var(--cosmic-accent);
+  color: var(--cosmic-on-accent);
+}
+
+.rn-checkbox--unchecked {
+  border-color: var(--cosmic-border);
+  background-color: var(--cosmic-component);
+}
+
+.rn-radio {
+  accent-color: var(--cosmic-accent);
+}
+
+.rn-help-button {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text-2);
+}
+
+.rn-icon-button,
+.rn-labeled-button,
+.rn-omnibar-button,
+.rn-search-button,
+.rn-delete-button,
+.rn-back-button,
+.rn-forward-button,
+.rn-edit-document-button,
+.rn-bottom-add-button,
+.rn-add-rem-button,
+.rn-table-row-add-button,
+.rn-job-indicator-button {
+  color: var(--cosmic-text-2);
+}
+
+.rn-checkbox,
+.rn-radio-group {
+  accent-color: var(--cosmic-accent);
+}
+
+.rn-learning-goal-slider,
+.rn-change-deck-status {
+  accent-color: var(--cosmic-accent);
+  color: var(--cosmic-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rn-button {
+    transition: none;
+  }
+}

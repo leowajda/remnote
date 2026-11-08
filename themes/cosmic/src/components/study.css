@@ -1,0 +1,88 @@
+.rn-queue {
+  background-color: var(--cosmic-bg);
+}
+
+.rn-queue-container {
+  background-color: var(--cosmic-primary);
+}
+
+.rn-queue__top-bar,
+.queue__title {
+  background-color: var(--cosmic-bg);
+  color: var(--cosmic-text);
+}
+
+.queue__close-button,
+.rn-close-button {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text);
+}
+
+.queue__progress-bar,
+.rn-progress-bar {
+  background-color: var(--cosmic-component);
+}
+
+.rn-queue__card-counter,
+.queue__badge {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text-2);
+}
+
+.queue-message,
+.queue-message--no-cards,
+.queue-message--loading,
+.queue-message--checkpoint,
+.queue-message--no-rem,
+.queue-message--cleared,
+.queue-message--daily-target-checkpoint {
+  background-color: var(--cosmic-bg);
+  color: var(--cosmic-text);
+}
+
+.rn-queue__show-answer-btn,
+.rn-queue__answer-btn,
+.rn-queue__answer-btn--too-soon,
+.rn-queue__answer-btn--forgotten,
+.rn-queue__answer-btn--immediately,
+.rn-queue__answer-btn--with-effort,
+.rn-queue__answer-btn--partial {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text);
+  border-color: var(--cosmic-divider);
+}
+
+.rn-queue-rem,
+.rn-question-rem {
+  background-color: var(--cosmic-bg);
+  color: var(--cosmic-text);
+}
+
+.rn-fill-in-blank,
+.rn-fill-in-blank--unrevealed {
+  background-color: var(--cosmic-accent-soft);
+  color: var(--cosmic-text);
+}
+
+.rn-flashcard-delimiter {
+  color: var(--cosmic-text-3);
+}
+
+.rn-flashcards-edit,
+.rn-flashcards-home,
+.rn-flashcards-page-container,
+.rn-deck-list {
+  background-color: var(--cosmic-bg);
+  color: var(--cosmic-text);
+}
+
+.rn-study-deck-btn {
+  background-color: var(--cosmic-accent);
+  color: var(--cosmic-on-accent);
+}
+
+@media (width <= 48em) {
+  .rn-queue-container {
+    background-color: var(--cosmic-bg);
+  }
+}

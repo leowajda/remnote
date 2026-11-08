@@ -1,0 +1,21 @@
+.rn-pdf-viewer,
+.rn-html-viewer {
+  background-color: var(--cosmic-bg);
+}
+
+.pdf-viewer__header {
+  background-color: var(--cosmic-primary);
+  color: var(--cosmic-text);
+}
+
+.rn-doc-header__new-source-btn,
+.rn-doc-header__add-source-btn,
+.rn-doc-header__show-tags-btn {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text-2);
+}
+
+.rn-html-highlight,
+.bg-gray-5[data-rem-tags="pdf-highlight"] {
+  background-color: var(--cosmic-accent-soft);
+}

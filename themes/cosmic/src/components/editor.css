@@ -1,0 +1,109 @@
+.rn-editor,
+.rn-editor-container,
+.rn-document {
+  background-color: var(--cosmic-bg);
+}
+
+.rn-editor__rem__body__text {
+  color: var(--cosmic-text);
+}
+
+.rn-doc-title {
+  color: var(--cosmic-text-bright);
+}
+
+.rn-rem-bullet,
+.rn-rem-icon-bullet,
+.rn-bullet-container {
+  color: var(--cosmic-text-3);
+}
+
+.six-dot,
+.toggle-collapse-button {
+  color: var(--cosmic-text-3);
+}
+
+.rn-tag,
+.rn-tag-container .rn-tag {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text);
+  border-radius: var(--cosmic-radius-xs);
+}
+
+.rn-work-in-progress-rem,
+.rn-work-in-progress-tag,
+.rn-work-in-progress-portal {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text);
+  border-radius: var(--cosmic-radius-xs);
+}
+
+.rn-rem-reference {
+  color: var(--cosmic-accent-text);
+}
+
+.rn-quote,
+.rn-quote-inner {
+  border-color: var(--cosmic-divider);
+  color: var(--cosmic-text-2);
+}
+
+.rn-list-number {
+  color: var(--cosmic-text-3);
+}
+
+.rn-search-portal,
+.node-top-level-in-portal {
+  background-color: var(--cosmic-bg-2);
+}
+
+.TreeNode {
+  border-color: var(--cosmic-divider);
+}
+
+.rn-code-node,
+.rn-code-node .EditorContainer {
+  background-color: var(--cosmic-bg-2);
+}
+
+.rn-code-node__toolbox,
+.rn-code-node__copy-button,
+.rn-code-node__change-language-dropdown {
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text-2);
+}
+
+.katex,
+.katex-display {
+  color: var(--cosmic-text);
+}
+
+.rn-cloze-button {
+  color: var(--cosmic-accent-text);
+}
+
+.rn-field-value-renderer,
+.rn-inline-field-title,
+.rn-tag-list-label,
+.rn-quote-content,
+.rn-search-portal-query {
+  color: var(--cosmic-text);
+}
+
+.rn-highlight-reference {
+  color: var(--cosmic-accent-text);
+}
+
+.rn-editor-divider,
+.rn-card-delimiter {
+  background-color: var(--cosmic-divider);
+}
+
+.rn-add-document-to-folder,
+.rn-practice-rem-in-this-folder,
+.rn-edit-later,
+.rn-list-card-remaining-items,
+.rn-rem-stack-arrow,
+.rn-list-number-wrapper {
+  color: var(--cosmic-text-2);
+}
