@@ -66,7 +66,15 @@ async function contrastChecks(page: Page) {
       label: "switch thumb against track (non-text indicator)",
       ratio: ratio(resolveBg(switchThumb), resolveBg(switchControl)),
     };
-    return [body, ...buttons, switchContrast];
+    const accents = [
+      ...document.querySelectorAll(
+        ".rn-tag, .rn-rem-reference, .rn-sidebar-counter, .rn-document-sidebar__top-link, .rn-table-header, .rn-queue__card-counter, .cloze",
+      ),
+    ].map((element) => ({
+      label: element.className,
+      ratio: ratio(toSrgb(colorValue(element, "color")), resolveBg(element)),
+    }));
+    return [body, ...buttons, ...accents, switchContrast];
   });
 }
 

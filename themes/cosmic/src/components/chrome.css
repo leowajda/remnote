@@ -6,7 +6,7 @@
 .rn-button:focus-visible,
 .rn-switch:focus-visible,
 .rn-checkbox:focus-visible {
-  outline: 2px solid var(--cosmic-accent-text);
+  outline: 2px solid var(--cosmic-focus);
   outline-offset: 2px;
 }
 

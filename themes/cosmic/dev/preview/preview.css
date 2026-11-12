@@ -224,7 +224,7 @@ body {
 }
 
 .rn-queue__card-counter {
-  color: var(--rn-clr-content-tertiary);
+  padding: 2px 8px;
 }
 
 .rn-queue-rem {
@@ -249,6 +249,33 @@ body {
 .preview-footer {
   text-align: center;
   font-size: 12px;
+}
+
+.fixture-sidebar,
+.fixture-editor,
+.fixture-portal {
+  padding: 12px;
+  border-radius: var(--cosmic-radius-s);
+}
+
+.fixture-sidebar > div {
+  padding: 8px 12px;
+}
+
+.fixture-sidebar .rn-sidebar-counter,
+.fixture-editor .rn-tag {
+  padding: 3px 8px;
+  margin-left: 6px;
+}
+
+.fixture-editor {
+  margin-top: 12px;
+}
+
+.fixture-editor blockquote {
+  margin: 16px 0;
+  padding-left: 12px;
+  border-left: 3px solid var(--cosmic-purple);
 }
 
 @media (width <= 640px) {

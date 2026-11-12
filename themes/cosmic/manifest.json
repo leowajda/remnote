@@ -6,12 +6,12 @@
   "repoUrl": "https://github.com/leowajda/remnote",
   "version": {
     "major": 0,
-    "minor": 3,
+    "minor": 4,
     "patch": 0
   },
   "theme": ["light", "dark"],
   "enableOnMobile": true,
-  "description": "System76 COSMIC light and dark for RemNote. Matches the desktop palettes with a yellow accent.",
+  "description": "COSMIC-inspired charcoal and soft-white workspaces with solar yellow, coral, cyan and lavender accents.",
   "requestNative": false,
   "requiredScopes": [],
   "projectUrl": "https://github.com/leowajda/remnote/tree/main/themes/cosmic",

@@ -25,8 +25,9 @@
 
 .rn-queue__card-counter,
 .queue__badge {
-  background-color: var(--cosmic-component);
-  color: var(--cosmic-text-2);
+  background-color: var(--cosmic-study-soft);
+  color: var(--cosmic-orange);
+  border-radius: var(--cosmic-radius-s);
 }
 
 .queue-message,
@@ -78,7 +79,35 @@
 
 .rn-study-deck-btn {
   background-color: var(--cosmic-accent);
+  background-image: var(--cosmic-solar-ribbon);
   color: var(--cosmic-on-accent);
+}
+
+/* Rating colors preserve meaning while echoing the desktop spectrum. */
+.rn-queue__answer-btn--forgotten {
+  background-color: var(--cosmic-destructive-soft);
+  color: var(--cosmic-destructive);
+  border-color: var(--cosmic-destructive);
+}
+
+.rn-queue__answer-btn--with-effort,
+.rn-queue__answer-btn--partial {
+  background-color: var(--cosmic-study-soft);
+  color: var(--cosmic-orange);
+  border-color: var(--cosmic-orange);
+}
+
+.rn-queue__answer-btn--immediately {
+  background-color: var(--cosmic-link-soft);
+  color: var(--cosmic-blue);
+  border-color: var(--cosmic-blue);
+}
+
+.rn-queue__show-answer-btn {
+  background-color: var(--cosmic-accent);
+  background-image: var(--cosmic-solar-ribbon);
+  color: var(--cosmic-on-accent);
+  border-radius: var(--cosmic-radius-s);
 }
 
 @media (width <= 48em) {

@@ -1,8 +1,8 @@
 .rn-table-header,
 .rn-column-header,
 .rn-column-header-non-primary {
-  background-color: var(--cosmic-primary);
-  color: var(--cosmic-text);
+  background-color: var(--cosmic-link-soft);
+  color: var(--cosmic-blue);
   border-color: var(--cosmic-divider);
 }
 

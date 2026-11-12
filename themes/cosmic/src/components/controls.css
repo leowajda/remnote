@@ -13,17 +13,20 @@
 .rn-button.rn-button--primary,
 .rn-primary {
   background-color: var(--cosmic-accent);
+  background-image: var(--cosmic-solar-ribbon);
   color: var(--cosmic-on-accent);
 }
 
 .rn-button--primary:hover:not(:disabled),
 .rn-button.rn-button--primary:hover:not(:disabled) {
+  background-image: none;
   background-color: var(--cosmic-accent-hover);
   color: var(--cosmic-on-accent);
 }
 
 .rn-button--primary:active:not(:disabled),
 .rn-button.rn-button--primary:active:not(:disabled) {
+  background-image: none;
   background-color: var(--cosmic-accent-pressed);
 }
 

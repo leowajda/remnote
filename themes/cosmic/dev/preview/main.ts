@@ -43,7 +43,15 @@ app.innerHTML = `
       <article class="preview-panel queue-panel"><h2>Practice queue</h2>
         <div class="rn-queue"><div class="rn-queue__top-bar"><span>Biology deck</span><span class="rn-queue__card-counter">4 / 12</span></div>
           <div class="rn-queue-rem"><strong>What is the role of ATP?</strong><p>Tap a rating after recalling the answer.</p></div>
-          <div class="queue-actions"><button class="rn-button" type="button">Again</button><button class="rn-button" type="button">Good</button><button class="rn-button" type="button">Easy</button></div></div>
+          <div class="queue-actions"><button class="rn-button rn-queue__answer-btn--forgotten" type="button">Again</button><button class="rn-button rn-queue__answer-btn--with-effort" type="button">Good</button><button class="rn-button rn-queue__answer-btn--immediately" type="button">Easy</button></div></div>
+      </article>
+      <article class="preview-panel"><h2>Connected notes</h2>
+        <nav class="rn-sidebar fixture-sidebar" aria-label="Notebook"><div class="rn-account-capsule">Personal workspace</div><div class="rn-document-sidebar__top-link rn-clr-background-light-accent">Biology <span class="rn-sidebar-counter">12 due</span></div><div>Research journal</div></nav>
+        <div class="rn-editor fixture-editor"><p class="rn-doc-title"><strong>Patterns in nature</strong></p><p>Explore <a class="rn-rem-reference" href="#connections">cellular networks</a> and <span class="rn-tag">Biology</span>.</p>
+          <blockquote class="rn-quote">Small connections build a larger understanding.</blockquote>
+          <div class="rn-search-portal fixture-portal" id="connections">Linked notes · Cellular energy</div>
+          <p><span class="highlight-color--yellow">Key idea</span> · <span class="highlight-color--orange">Revisit</span> · <span class="highlight-color--blue">Source</span> · <span class="highlight-color--purple">Connection</span></p>
+        </div>
       </article>
     </section>
     <nav class="mobile-nav" aria-label="Preview mobile navigation"><button type="button">Home</button><button type="button">Search</button><button type="button">Practice</button><button type="button">Settings</button></nav>

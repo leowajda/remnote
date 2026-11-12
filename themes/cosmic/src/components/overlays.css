@@ -58,3 +58,11 @@ div[data-cy="omnibar"],
   background-color: var(--cosmic-secondary);
   color: var(--cosmic-text);
 }
+
+.rn-menu,
+.rn-popup__content,
+.rn-dialog,
+.rn-floating-toolbar {
+  border-radius: var(--cosmic-radius-m);
+  box-shadow: var(--rn-clr-shadow-menu);
+}

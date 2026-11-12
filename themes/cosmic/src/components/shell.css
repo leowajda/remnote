@@ -5,24 +5,33 @@
 }
 
 .rn-document-sidebar__top-link.rn-clr-background-light-accent {
-  background-color: var(--cosmic-accent-soft);
+  background-color: var(--cosmic-tag-soft);
+  color: var(--cosmic-purple);
+  border-radius: var(--cosmic-radius-s);
+  box-shadow: inset 3px 0 var(--cosmic-purple);
 }
 
 .rn-sidebar-counter {
-  background-color: var(--cosmic-component);
-  color: var(--cosmic-text-2);
+  background-color: var(--cosmic-study-soft);
+  color: var(--cosmic-orange);
 }
 
 [id="document-sidebar__account-capsule"],
 .rn-account-capsule {
   background-color: var(--cosmic-component);
+  background-image: var(--cosmic-orbit-ribbon);
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  background-position: bottom;
+  border-radius: var(--cosmic-radius-s);
   color: var(--cosmic-text);
 }
 
 .rn-add-button,
 .rn-add-document-button {
-  background-color: var(--cosmic-component);
-  color: var(--cosmic-text);
+  background-color: var(--cosmic-link-soft);
+  color: var(--cosmic-blue);
+  border-radius: var(--cosmic-radius-s);
 }
 
 .rn-pane__top-bar,
@@ -31,6 +40,14 @@
 .rn-navigation-bar,
 .rn-sticky-header {
   background-color: var(--cosmic-bg);
+}
+
+/* A fine orbital stroke echoes the wallpaper without painting the editor. */
+.rn-pane__top-bar {
+  background-image: var(--cosmic-orbit-ribbon);
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: bottom;
 }
 
 .mosaic-tile {
