@@ -254,7 +254,8 @@ test("desktop and mobile visual snapshots", async ({ page, browserName }) => {
     for (const mode of ["light", "dark"] as const) {
       if (mode === "dark")
         await page.getByRole("button", { name: "Switch to dark" }).click();
-      await expect(page).toHaveScreenshot(`cosmic-${label}-${mode}.png`, {
+      // Collect every mode/viewport diff in one run, while still failing the test.
+      await expect.soft(page).toHaveScreenshot(`cosmic-${label}-${mode}.png`, {
         fullPage: label === "desktop",
       });
       if (mode === "dark")
