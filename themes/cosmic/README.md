@@ -13,4 +13,4 @@ Solar gradients wash primary actions from yellow into coral. Thin lavender–per
 
 Version **0.4.0**. The release ID remains `cosmic-dark`; the package supports both modes automatically. Upload `releases/cosmic-0.4.0.zip` from this repository to RemNote. Disable other theme CSS and browser recoloring extensions such as Dark Reader when evaluating the palette. Development instructions: https://github.com/leowajda/remnote/blob/refactor/cosmic-development/themes/cosmic/dev/README.md
 
-![COSMIC](https://raw.githubusercontent.com/leowajda/remnote/main/themes/cosmic/logo.png)
+![COSMIC](https://raw.githubusercontent.com/leowajda/remnote/master/themes/cosmic/logo.png)
