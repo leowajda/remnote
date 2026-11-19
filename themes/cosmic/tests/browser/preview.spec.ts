@@ -68,13 +68,47 @@ async function contrastChecks(page: Page) {
     };
     const accents = [
       ...document.querySelectorAll(
-        ".rn-tag, .rn-rem-reference, .rn-sidebar-counter, .rn-document-sidebar__top-link, .rn-table-header, .rn-queue__card-counter, .cloze",
+        ".rn-tag, .rn-rem-reference, .rn-sidebar-counter, .rn-document-sidebar__top-link, .rn-table-header, .rn-queue__card-counter, .cloze, .rn-clr-content-on-color, .rn-settings__link, .fixture-highlight, .rn-tooltip .text-cyan-70, .rn-button--Outline .text-black",
       ),
     ].map((element) => ({
       label: element.className,
       ratio: ratio(toSrgb(colorValue(element, "color")), resolveBg(element)),
     }));
-    return [body, ...buttons, ...accents, switchContrast];
+    const placeholders = [
+      ...document.querySelectorAll("input[placeholder]"),
+    ].map((element) => ({
+      label: `placeholder: ${element.getAttribute("placeholder")}`,
+      ratio: ratio(
+        toSrgb(getComputedStyle(element, "::placeholder").color),
+        resolveBg(element),
+      ),
+    }));
+    const checkbox = document.querySelector(".fixture-checkbox")!;
+    const checkboxContrast = {
+      label: "checkbox tick (non-text indicator)",
+      ratio: ratio(
+        toSrgb(getComputedStyle(checkbox, "::before").borderRightColor),
+        toSrgb(getComputedStyle(checkbox, "::after").backgroundColor),
+      ),
+    };
+    const arrows = [
+      ...document.querySelectorAll(".fixture-filter-scroller > button"),
+    ].map((element) => ({
+      label: `border: ${element.getAttribute("aria-label")}`,
+      ratio: ratio(
+        toSrgb(getComputedStyle(element).borderColor),
+        resolveBg(element),
+      ),
+    }));
+    return [
+      body,
+      ...buttons,
+      ...accents,
+      ...placeholders,
+      switchContrast,
+      checkboxContrast,
+      ...arrows,
+    ];
   });
 }
 
@@ -193,7 +227,10 @@ for (const mode of ["light", "dark"]) {
         check.ratio,
         `${check.label}: ${check.ratio.toFixed(2)}:1`,
       ).toBeGreaterThanOrEqual(
-        check.label.startsWith("switch thumb") ? 3 : 4.5,
+        check.label.includes("non-text indicator") ||
+          check.label.startsWith("border:")
+          ? 3
+          : 4.5,
       );
   });
 }
@@ -226,6 +263,152 @@ test("disabled button background does not change on hover", async ({
   );
   expect(after).toBe(before);
 });
+
+for (const mode of ["light", "dark"] as const) {
+  test(`${mode} body-scoped host styles cannot replace the palette or on-color text`, async ({
+    page,
+  }) => {
+    // RemNote 1.30 uses :root body.<mode>, not just the preview's mode wrapper.
+    // Load representative host rules AFTER the theme to exercise specificity.
+    await page.addStyleTag({
+      content: `
+        :root body.dark, :root body.light {
+          --rn-clr-background-primary: #202024;
+          --rn-clr-content-on-color: #fff;
+          --rn-clr-background-accent: #4b69ff;
+          --rn-clr-background-accent--hovered: linear-gradient(#4b69ff, #4b69ff);
+          --rn-clr-background-elevation-10: linear-gradient(#29292e, #29292e);
+        }
+      `,
+    });
+    await page.evaluate((mode) => {
+      document.querySelector("#app")!.className = "";
+      document.body.className = mode;
+    }, mode);
+    const exportButton = page.getByRole("button", {
+      name: "Export",
+      exact: true,
+    });
+    await expect(page.locator("#app")).toHaveCSS(
+      "background-color",
+      mode === "dark" ? "rgb(27, 27, 27)" : "rgb(215, 215, 215)",
+    );
+    await expect(exportButton).toHaveCSS(
+      "background-color",
+      mode === "dark" ? "rgb(99, 208, 223)" : "rgb(0, 82, 90)",
+    );
+    for (const state of ["rest", "hover", "pressed"]) {
+      if (state === "hover") await exportButton.hover();
+      if (state === "pressed") await page.mouse.down();
+      await expect(exportButton).toHaveCSS("background-image", "none");
+      await expectTextContrast(
+        page,
+        "rn-clr-content-on-color dark:rn-clr-content-primary",
+      );
+    }
+    await page.mouse.up();
+    const colors = await page.evaluate(() => {
+      const root = getComputedStyle(document.body);
+      return ["--rn-colors-blue-50", "--rn-clr-background-accent"].map(
+        (name) => {
+          const probe = document.createElement("span");
+          probe.style.color = root.getPropertyValue(name);
+          document.body.append(probe);
+          const color = getComputedStyle(probe).color;
+          probe.remove();
+          return color;
+        },
+      );
+    });
+    expect(colors[0]).toBe(colors[1]);
+  });
+
+  test(`${mode} selected settings remain readable on hover with one interaction accent`, async ({
+    page,
+  }) => {
+    if (mode === "dark")
+      await page.getByRole("button", { name: "Switch to dark" }).click();
+    const selected = page.getByRole("link", {
+      name: "Appearance",
+      exact: true,
+    });
+    await selected.hover();
+    await expectTextContrast(page, "rn-settings__link rn-clr-content-accent");
+    await expect(selected).toHaveCSS("background-image", "none");
+    const colors = await page.evaluate(() =>
+      [
+        ".rn-settings__link[aria-current]",
+        ".rn-nav-tab-button[aria-selected=true]",
+        ".rn-rem-reference",
+      ].map(
+        (selector) => getComputedStyle(document.querySelector(selector)!).color,
+      ),
+    );
+    expect(new Set(colors).size).toBe(1);
+  });
+
+  test(`${mode} filter arrows stay readable and leave labels unobscured`, async ({
+    page,
+  }) => {
+    if (mode === "dark")
+      await page.getByRole("button", { name: "Switch to dark" }).click();
+    const right = page.getByRole("button", {
+      name: "Scroll right",
+      exact: true,
+    });
+    const left = page.getByRole("button", { name: "Scroll left", exact: true });
+    await expect(page.locator(".fixture-scroll-fade")).toBeHidden();
+    const list = await page.locator(".no-horizontal-scroll").boundingBox();
+    const rightBox = await right.boundingBox();
+    const leftBox = await left.boundingBox();
+    expect(list!.x + list!.width).toBeLessThanOrEqual(rightBox!.x);
+    expect(list!.x).toBeGreaterThanOrEqual(leftBox!.x + leftBox!.width);
+    await right.hover();
+    await expectTextContrast(page, "›");
+    await right.click();
+    await expect
+      .poll(() =>
+        page.locator(".no-horizontal-scroll").evaluate((e) => e.scrollLeft),
+      )
+      .toBeGreaterThan(0);
+    await left.click();
+    await expect
+      .poll(() =>
+        page.locator(".no-horizontal-scroll").evaluate((e) => e.scrollLeft),
+      )
+      .toBe(0);
+    await page.keyboard.press("Tab");
+    await expect(right).toBeFocused();
+    await expect(right).toHaveCSS("outline-style", "solid");
+  });
+
+  test(`${mode} host tooltips are flat and authored cloze highlights survive`, async ({
+    page,
+  }) => {
+    if (mode === "dark")
+      await page.getByRole("button", { name: "Switch to dark" }).click();
+    await expect(page.locator(".rn-tooltip")).toHaveCSS(
+      "background-image",
+      "none",
+    );
+    const highlight = await page
+      .locator(".highlight-color--yellow")
+      .first()
+      .evaluate((e) => getComputedStyle(e).backgroundColor);
+    await expect(page.locator(".cloze.has-highlight-color")).toHaveCSS(
+      "background-color",
+      highlight,
+    );
+    for (const name of ["Create", "Again", "Good", "Easy"]) {
+      const button = page.getByRole("button", { name, exact: true });
+      await button.hover();
+      await expectTextContrast(page, name);
+      await page.mouse.down();
+      await expectTextContrast(page, name);
+      await page.mouse.up();
+    }
+  });
+}
 
 test("keyboard focus is visible on the primary action", async ({ page }) => {
   await page.keyboard.press("Tab");

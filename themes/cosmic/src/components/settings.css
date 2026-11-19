@@ -1,38 +1,72 @@
-.rn-all-notes {
-  background-color: var(--cosmic-bg);
-  color: var(--cosmic-text);
-}
-
-.rn-all-notes__row:hover {
-  background-color: var(--cosmic-hover);
-}
-
-.rn-all-notes__row__date {
-  color: var(--cosmic-text-2);
-}
-
 .rn-settings,
-.rn-settings__sidebar,
 .rn-settings__content__top-bar {
   background-color: var(--cosmic-bg);
   color: var(--cosmic-text);
 }
 
-.rn-settings__link {
+.rn-settings__sidebar {
+  background-color: var(--cosmic-primary);
   color: var(--cosmic-text);
 }
 
-.rn-settings__link.rn-clr-content-accent {
+.rn-settings__link {
+  color: var(--cosmic-text);
+  border-radius: var(--cosmic-radius-s);
+}
+
+.rn-settings__link.rn-clr-content-accent,
+.rn-settings__link.rn-clr-content-primary,
+.rn-settings__link[aria-current="page"] {
+  background: var(--cosmic-accent-soft);
   color: var(--cosmic-accent-text);
 }
 
 .rn-settings__link:hover {
-  background-color: var(--cosmic-hover);
-  border-radius: var(--cosmic-radius-xs);
+  background: var(--cosmic-hover);
+}
+
+/* The host paints a second, inset row; keep selection/hover on one surface. */
+.rn-settings .rn-settings__link > .group-hover\:bg-gray-10 {
+  background: transparent;
+}
+
+.rn-settings__link.rn-clr-content-accent:hover,
+.rn-settings__link.rn-clr-content-primary:hover,
+.rn-settings__link[aria-current="page"]:hover {
+  background: var(--cosmic-accent-mid);
+  color: var(--cosmic-accent-text);
+}
+
+.rn-settings input::placeholder {
+  color: var(--cosmic-text-3);
+  opacity: 1;
+}
+
+/* Appearance thumbnails use inline blue shadows, separate from host tokens.
+ * Replace that decorative overlay with the same outline as other selections.
+ */
+.rn-settings button:has(> sub) > .relative > .absolute {
+  display: none;
+}
+
+.rn-settings button:has(> sub) > .relative {
+  outline: 1px solid var(--cosmic-divider);
+  outline-offset: -1px;
+}
+
+.rn-settings button:has(> sub.rn-clr-content-primary) > .relative {
+  outline: 2px solid var(--cosmic-accent);
+  outline-offset: -2px;
 }
 
 .rn-nav-tab-button {
   color: var(--cosmic-text-2);
+}
+
+.rn-nav-tab-button[aria-selected="true"],
+.rn-nav-tab-button.rn-clr-content-accent {
+  color: var(--cosmic-accent-text);
+  border-bottom-color: var(--cosmic-accent-text);
 }
 
 .rn-plugin-sidebar,

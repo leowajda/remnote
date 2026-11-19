@@ -2,7 +2,7 @@
 .rn-editor__rem__body--red {
   background-color: color-mix(
     in srgb,
-    var(--cosmic-highlight-red) 22%,
+    var(--cosmic-highlight-red) calc(var(--cosmic-highlight-opacity) * 100%),
     transparent
   );
 }
@@ -11,7 +11,7 @@
 .rn-editor__rem__body--orange {
   background-color: color-mix(
     in srgb,
-    var(--cosmic-highlight-orange) 22%,
+    var(--cosmic-highlight-orange) calc(var(--cosmic-highlight-opacity) * 100%),
     transparent
   );
 }
@@ -20,7 +20,7 @@
 .rn-editor__rem__body--yellow {
   background-color: color-mix(
     in srgb,
-    var(--cosmic-highlight-yellow) 22%,
+    var(--cosmic-highlight-yellow) calc(var(--cosmic-highlight-opacity) * 100%),
     transparent
   );
 }
@@ -29,7 +29,7 @@
 .rn-editor__rem__body--blue {
   background-color: color-mix(
     in srgb,
-    var(--cosmic-highlight-blue) 22%,
+    var(--cosmic-highlight-blue) calc(var(--cosmic-highlight-opacity) * 100%),
     transparent
   );
 }
@@ -38,7 +38,7 @@
 .rn-editor__rem__body--purple {
   background-color: color-mix(
     in srgb,
-    var(--cosmic-highlight-purple) 22%,
+    var(--cosmic-highlight-purple) calc(var(--cosmic-highlight-opacity) * 100%),
     transparent
   );
 }
@@ -47,16 +47,22 @@
 .rn-editor__rem__body--green {
   background-color: color-mix(
     in srgb,
-    var(--cosmic-highlight-green) 22%,
+    var(--cosmic-highlight-green) calc(var(--cosmic-highlight-opacity) * 100%),
     transparent
   );
 }
 
 .cloze {
-  color: var(--cosmic-accent-text);
-  text-decoration: underline;
-  text-decoration-color: var(--cosmic-accent);
+  color: var(--cosmic-text);
+  border-bottom-color: var(--cosmic-accent);
+}
+
+.cloze:not(.has-highlight-color) {
   background-color: var(--cosmic-accent-soft);
+}
+
+.emptyCloze .linear-editor-item::after {
+  color: var(--cosmic-text-3);
 }
 
 .rich-text-editor__change-cloze-button {

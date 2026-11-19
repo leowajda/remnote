@@ -4,25 +4,35 @@
   background-color: var(--cosmic-primary);
 }
 
-.rn-document-sidebar__top-link.rn-clr-background-light-accent {
-  background-color: var(--cosmic-tag-soft);
-  color: var(--cosmic-purple);
+.rn-document-sidebar__top-link.rn-clr-background-light-accent,
+.rn-document-sidebar__top-link.rn-clr-content-primary {
+  --rn-clr-content-primary: var(--cosmic-accent-text);
+  --rn-clr-content-secondary: var(--cosmic-accent-text);
+
+  background-color: var(--cosmic-accent-soft);
+  color: var(--cosmic-accent-text);
   border-radius: var(--cosmic-radius-s);
-  box-shadow: inset 3px 0 var(--cosmic-purple);
+}
+
+.rn-document-sidebar__top-link.rn-clr-background-light-accent:hover,
+.rn-document-sidebar__top-link.rn-clr-content-primary:hover {
+  background-color: var(--cosmic-accent-mid);
 }
 
 .rn-sidebar-counter {
-  background-color: var(--cosmic-study-soft);
-  color: var(--cosmic-orange);
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text-2);
+}
+
+.rn-sidebar
+  [data-test="Document Sidebar Bottom Upgrade To Pro Link"]
+  .text-purple-50 {
+  color: var(--cosmic-text-2);
 }
 
 [id="document-sidebar__account-capsule"],
 .rn-account-capsule {
   background-color: var(--cosmic-component);
-  background-image: var(--cosmic-orbit-ribbon);
-  background-repeat: no-repeat;
-  background-size: 100% 3px;
-  background-position: bottom;
   border-radius: var(--cosmic-radius-s);
   color: var(--cosmic-text);
 }
@@ -40,14 +50,6 @@
 .rn-navigation-bar,
 .rn-sticky-header {
   background-color: var(--cosmic-bg);
-}
-
-/* A fine orbital stroke echoes the wallpaper without painting the editor. */
-.rn-pane__top-bar {
-  background-image: var(--cosmic-orbit-ribbon);
-  background-repeat: no-repeat;
-  background-size: 100% 2px;
-  background-position: bottom;
 }
 
 .mosaic-tile {

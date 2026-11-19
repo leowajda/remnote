@@ -66,3 +66,26 @@ div[data-cy="omnibar"],
   border-radius: var(--cosmic-radius-m);
   box-shadow: var(--rn-clr-shadow-menu);
 }
+
+.rn-tooltip.rn-tooltip {
+  --rn-tooltip-background: var(--cosmic-secondary);
+  --rn-tooltip-border: var(--cosmic-divider);
+
+  background: var(--cosmic-secondary);
+  color: var(--cosmic-text);
+  border-color: var(--cosmic-divider);
+}
+
+/* The host scopes these to a mode and applies its own arrow tokens. */
+.rn-tooltip.rn-tooltip .tippy-arrow {
+  --rn-tooltip-background: var(--cosmic-secondary);
+  --rn-tooltip-border: var(--cosmic-divider);
+}
+
+.rn-tooltip .text-cyan-70 {
+  color: var(--cosmic-text);
+}
+
+.flashcard-preview-wrapper .rn-popup__content.rn-popup__content {
+  background: var(--cosmic-secondary);
+}

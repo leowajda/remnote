@@ -18,15 +18,14 @@
   color: var(--cosmic-text);
 }
 
-.queue__progress-bar,
-.rn-progress-bar {
+.queue__progress-bar {
   background-color: var(--cosmic-component);
 }
 
 .rn-queue__card-counter,
 .queue__badge {
-  background-color: var(--cosmic-study-soft);
-  color: var(--cosmic-orange);
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text-2);
   border-radius: var(--cosmic-radius-s);
 }
 
@@ -41,13 +40,8 @@
   color: var(--cosmic-text);
 }
 
-.rn-queue__show-answer-btn,
 .rn-queue__answer-btn,
-.rn-queue__answer-btn--too-soon,
-.rn-queue__answer-btn--forgotten,
-.rn-queue__answer-btn--immediately,
-.rn-queue__answer-btn--with-effort,
-.rn-queue__answer-btn--partial {
+.rn-queue__answer-btn--too-soon {
   background-color: var(--cosmic-component);
   color: var(--cosmic-text);
   border-color: var(--cosmic-divider);
@@ -79,35 +73,81 @@
 
 .rn-study-deck-btn {
   background-color: var(--cosmic-accent);
-  background-image: var(--cosmic-solar-ribbon);
   color: var(--cosmic-on-accent);
 }
 
-/* Rating colors preserve meaning while echoing the desktop spectrum. */
+/* Rating colors convey recall feedback, rather than selection. */
 .rn-queue__answer-btn--forgotten {
-  background-color: var(--cosmic-destructive-soft);
-  color: var(--cosmic-destructive);
-  border-color: var(--cosmic-destructive);
+  --cosmic-rating: var(--cosmic-destructive);
+  --cosmic-rating-surface: var(--cosmic-destructive-soft);
 }
 
 .rn-queue__answer-btn--with-effort,
 .rn-queue__answer-btn--partial {
-  background-color: var(--cosmic-study-soft);
-  color: var(--cosmic-orange);
-  border-color: var(--cosmic-orange);
+  --cosmic-rating: var(--cosmic-warning);
+  --cosmic-rating-surface: var(--cosmic-warning-soft);
 }
 
 .rn-queue__answer-btn--immediately {
-  background-color: var(--cosmic-link-soft);
-  color: var(--cosmic-blue);
-  border-color: var(--cosmic-blue);
+  --cosmic-rating: var(--cosmic-success);
+  --cosmic-rating-surface: var(--cosmic-success-soft);
+}
+
+:is(
+  .rn-queue__answer-btn--forgotten,
+  .rn-queue__answer-btn--with-effort,
+  .rn-queue__answer-btn--partial,
+  .rn-queue__answer-btn--immediately
+) {
+  background: var(--cosmic-rating-surface);
+  color: var(--cosmic-rating);
+  border-color: var(--cosmic-rating);
+}
+
+:is(
+    .rn-queue__answer-btn--forgotten,
+    .rn-queue__answer-btn--with-effort,
+    .rn-queue__answer-btn--partial,
+    .rn-queue__answer-btn--immediately
+  ).rn-button:hover:not(:disabled) {
+  background: color-mix(
+    in srgb,
+    var(--cosmic-rating) 8%,
+    var(--cosmic-rating-surface)
+  );
+  color: var(--cosmic-rating);
 }
 
 .rn-queue__show-answer-btn {
   background-color: var(--cosmic-accent);
-  background-image: var(--cosmic-solar-ribbon);
   color: var(--cosmic-on-accent);
   border-radius: var(--cosmic-radius-s);
+}
+
+.queue-checkpoint-sheet-bg.queue-checkpoint-sheet-bg {
+  background: var(--cosmic-primary);
+}
+
+.rn-revealed-answer-right-bg.rn-revealed-answer-right-bg,
+.ai-grade-right-answer.ai-grade-right-answer,
+.ai-grade-right-answer-container-background.ai-grade-right-answer-container-background {
+  background: var(--cosmic-success-soft);
+  color: var(--cosmic-success);
+  border-color: var(--cosmic-success);
+}
+
+.rn-revealed-answer-wrong-bg.rn-revealed-answer-wrong-bg,
+.ai-grade-wrong-answer.ai-grade-wrong-answer,
+.ai-grade-wrong-answer-container-background.ai-grade-wrong-answer-container-background {
+  background: var(--cosmic-destructive-soft);
+  color: var(--cosmic-destructive);
+  border-color: var(--cosmic-destructive);
+}
+
+.ai-grade-partial-answer.ai-grade-partial-answer {
+  background: var(--cosmic-warning-soft);
+  color: var(--cosmic-warning);
+  border-color: var(--cosmic-warning);
 }
 
 @media (width <= 48em) {

@@ -25,9 +25,8 @@
 
 .rn-tag,
 .rn-tag-container .rn-tag {
-  box-shadow: inset 2px 0 var(--cosmic-pigment-purple);
-  background-color: var(--cosmic-tag-soft);
-  color: var(--cosmic-purple);
+  background-color: var(--cosmic-component);
+  color: var(--cosmic-text-2);
   border-radius: var(--cosmic-radius-s);
 }
 
@@ -46,7 +45,7 @@
 
 .rn-quote,
 .rn-quote-inner {
-  border-color: var(--cosmic-purple);
+  border-color: var(--cosmic-divider);
   color: var(--cosmic-text-2);
 }
 
@@ -56,7 +55,7 @@
 
 .rn-search-portal,
 .node-top-level-in-portal {
-  background-color: var(--cosmic-link-soft);
+  background-color: var(--cosmic-primary);
 }
 
 .TreeNode {
@@ -70,7 +69,6 @@
 
 .rn-code-node {
   border-radius: var(--cosmic-radius-s);
-  box-shadow: inset 0 2px var(--cosmic-pigment-blue);
 }
 
 .rn-code-node__toolbox,
@@ -103,7 +101,6 @@
 
 .rn-search-portal {
   border-radius: var(--cosmic-radius-s);
-  box-shadow: inset 3px 0 var(--cosmic-pigment-cyan);
 }
 
 .rn-editor-divider,

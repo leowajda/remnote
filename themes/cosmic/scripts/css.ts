@@ -17,6 +17,11 @@ export function assertCSS(css: string): void {
     if (decl.important) throw new Error(`Important declaration: ${decl.prop}`);
     if (decl.prop.startsWith("--cosmic-")) declared.add(decl.prop);
     valueParser(decl.value).walk((node) => {
+      if (
+        node.type === "function" &&
+        /^(repeating-)?(linear|radial|conic)-gradient$/i.test(node.value)
+      )
+        throw new Error(`Gradient declaration: ${decl.prop}`);
       if (node.type === "function" && node.value === "var") {
         const name = node.nodes[0];
         if (name?.type === "word" && name.value.startsWith("--cosmic-"))

@@ -1,6 +1,7 @@
 .rn-pdf-viewer,
 .rn-html-viewer {
   background-color: var(--cosmic-bg);
+  color: var(--cosmic-text);
 }
 
 .pdf-viewer__header {
@@ -17,5 +18,20 @@
 
 .rn-html-highlight,
 .bg-gray-5[data-rem-tags="pdf-highlight"] {
-  background-color: var(--cosmic-accent-soft);
+  background-color: var(--cosmic-primary);
+  color: var(--cosmic-text);
+}
+
+/* Theme the reader chrome, not the PDF's canvas/text/annotation layers.
+ * Paper appearance is an independent RemNote preference; filtering a canvas
+ * here would also alter diagrams, photographs, and annotation colors.
+ */
+.rn-pdf-viewer .pdf-viewer__header,
+.rn-html-viewer .pdf-viewer__header {
+  border-color: var(--cosmic-divider);
+}
+
+.pdf-page-key-points-inner.pdf-page-key-points-inner {
+  background: var(--cosmic-primary);
+  color: var(--cosmic-text);
 }
