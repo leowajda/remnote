@@ -1,14 +1,25 @@
-/* RemNote host token aliases. Shared bindings resolve against the active palette. */
+/* RemNote 1.30 sets tokens on :root body.dark (0,2,1). Three classes win
+ * that cascade without !important, including on nested reader mode wrappers.
+ */
 /* stylelint-disable custom-property-pattern -- RemNote exposes these host variable names as its CSS API. */
 :root,
-.light.light,
-.dark.dark {
+.light.light.light,
+.dark.dark.dark {
   --rn-clr-background: var(--cosmic-bg);
   --rn-clr-background-primary: var(--cosmic-bg);
   --rn-clr-background-secondary: var(--cosmic-primary);
   --rn-clr-background-tertiary: var(--cosmic-secondary);
   --rn-clr-background-accent: var(--cosmic-accent);
   --rn-clr-background-light-accent: var(--cosmic-accent-soft);
+  --rn-clr-background-base-surface: var(--cosmic-bg);
+  --rn-clr-background-primary--hovered: var(--cosmic-hover);
+  --rn-clr-background--hovered: var(--cosmic-hover);
+  --rn-clr-background--pressed: var(--cosmic-pressed);
+  --rn-clr-background--focused: var(--cosmic-accent-soft);
+  --rn-clr-background-accent--hovered: var(--cosmic-accent-hover);
+  --rn-clr-background-light-accent--hovered: var(--cosmic-accent-mid);
+  --rn-clr-background-light-warning--hovered: var(--cosmic-warning-soft);
+  --rn-clr-background-light-positive--hovered: var(--cosmic-success-soft);
   --rn-clr-background-elevation-5: var(--cosmic-bg);
   --rn-clr-background-elevation-10: var(--cosmic-bg-2);
   --rn-clr-background-elevation-15: var(--cosmic-primary);
@@ -56,7 +67,7 @@
   --rn-clr-content-inverse-tertiary: var(--cosmic-inverse-text-3);
   --rn-clr-content-logo-color: var(--cosmic-accent);
   --rn-clr-border-opaque: var(--cosmic-divider);
-  --rn-clr-border-selected: var(--cosmic-border);
+  --rn-clr-border-selected: var(--cosmic-accent-text);
   --rn-clr-border-accent: var(--cosmic-accent);
   --rn-clr-border-accent-light: var(--cosmic-accent-hover);
   --rn-clr-border-light-accent: var(--cosmic-accent-soft);
@@ -87,34 +98,70 @@
   --rn-colors-gray-10: var(--cosmic-gray-2);
   --rn-colors-gray-15: var(--cosmic-gray-3);
   --rn-colors-gray-20: var(--cosmic-gray-4);
-  --rn-colors-gray-30: var(--cosmic-gray-8);
-  --rn-colors-gray-40: var(--cosmic-gray-8);
+  --rn-colors-gray-30: var(--cosmic-gray-5);
+  --rn-colors-gray-40: var(--cosmic-gray-6);
   --rn-colors-gray-50: var(--cosmic-gray-7);
   --rn-colors-gray-60: var(--cosmic-gray-8);
   --rn-colors-gray-70: var(--cosmic-gray-9);
   --rn-colors-gray-80: var(--cosmic-text);
   --rn-colors-gray-90: var(--cosmic-gray-90-host);
   --rn-colors-gray-100: var(--cosmic-gray-10);
-  --rn-colors-gray-0-val: 250 250 249;
-  --rn-colors-gray-5-val: 240 240 239;
-  --rn-colors-gray-10-val: 234 234 233;
-  --rn-colors-gray-15-val: 229 229 228;
-  --rn-colors-gray-20-val: 222 222 221;
-  --rn-colors-gray-30-val: 94 94 94;
-  --rn-colors-gray-40-val: 94 94 94;
-  --rn-colors-gray-50-val: 104 104 104;
-  --rn-colors-gray-60-val: 94 94 94;
-  --rn-colors-gray-70-val: 71 71 71;
-  --rn-colors-gray-80-val: 48 48 48;
-  --rn-colors-gray-90-val: 27 27 27;
-  --rn-colors-gray-100-val: 0 0 0;
+  --rn-colors-gray-0-val: 215 215 215;
+  --rn-colors-gray-5-val: 228 228 228;
+  --rn-colors-gray-10-val: 245 245 245;
+  --rn-colors-gray-15-val: 246 246 246;
+  --rn-colors-gray-20-val: 252 252 252;
+  --rn-colors-gray-30-val: 176 176 176;
+  --rn-colors-gray-40-val: 128 128 128;
+  --rn-colors-gray-50-val: 85 85 85;
+  --rn-colors-gray-60-val: 72 72 72;
+  --rn-colors-gray-70-val: 46 46 46;
+  --rn-colors-gray-80-val: 18 18 18;
+  --rn-colors-gray-90-val: 22 22 22;
+  --rn-colors-gray-100-val: 18 18 18;
+
+  /* Rebind both representations: host aliases computed on an ancestor do
+   * not recompute when only the RGB channels change on a mode wrapper. */
+  --rn-colors-blue-0: rgb(var(--rn-colors-blue-0-val));
+  --rn-colors-blue-5: rgb(var(--rn-colors-blue-5-val));
+  --rn-colors-blue-10: rgb(var(--rn-colors-blue-10-val));
+  --rn-colors-blue-20: rgb(var(--rn-colors-blue-20-val));
+  --rn-colors-blue-30: rgb(var(--rn-colors-blue-30-val));
+  --rn-colors-blue-40: rgb(var(--rn-colors-blue-40-val));
+  --rn-colors-blue-50: rgb(var(--rn-colors-blue-50-val));
   --rn-colors-blue-60: var(--cosmic-blue);
+  --rn-colors-blue-70: var(--cosmic-blue);
   --rn-colors-blue-80: var(--cosmic-blue);
-  --rn-colors-blue-0-val: 228 242 243;
-  --rn-colors-blue-5-val: 204 228 230;
-  --rn-colors-blue-20-val: 23 100 120;
-  --rn-colors-blue-50-val: 23 100 120;
-  --rn-colors-blue-60-val: 23 100 120;
+  --rn-colors-blue-90: var(--cosmic-blue);
+  --rn-colors-blue-100: var(--cosmic-blue);
+  --rn-colors-blue-0-val: 215 227 228;
+  --rn-colors-blue-5-val: 194 214 216;
+  --rn-colors-blue-10-val: 173 201 204;
+  --rn-colors-blue-20-val: 151 187 191;
+  --rn-colors-blue-30-val: 102 153 160;
+  --rn-colors-blue-40-val: 44 113 120;
+  --rn-colors-blue-50-val: 0 82 90;
+  --rn-colors-blue-60-val: 0 82 90;
+  --rn-colors-blue-70-val: 0 82 90;
+  --rn-colors-blue-80-val: 0 82 90;
+  --rn-colors-blue-90-val: 0 82 90;
+  --rn-colors-blue-100-val: 0 82 90;
+
+  /* RemNote also caches a primary ramp independently of its blue ramp. */
+  --rn-colors-primary-0: var(--rn-colors-blue-0);
+  --rn-colors-primary-5: var(--rn-colors-blue-5);
+  --rn-colors-primary-0-val: var(--rn-colors-blue-0-val);
+  --rn-colors-primary-5-val: var(--rn-colors-blue-5-val);
+  --rn-colors-primary-10-val: var(--rn-colors-blue-10-val);
+  --rn-colors-primary-20-val: var(--rn-colors-blue-20-val);
+  --rn-colors-primary-30-val: var(--rn-colors-blue-30-val);
+  --rn-colors-primary-40-val: var(--rn-colors-blue-40-val);
+  --rn-colors-primary-50-val: var(--rn-colors-blue-50-val);
+  --rn-colors-primary-60-val: var(--rn-colors-blue-60-val);
+  --rn-colors-primary-70-val: var(--rn-colors-blue-70-val);
+  --rn-colors-primary-80-val: var(--rn-colors-blue-80-val);
+  --rn-colors-primary-90-val: var(--rn-colors-blue-90-val);
+  --rn-colors-primary-100-val: var(--rn-colors-blue-100-val);
   --rn-colors-red-0-val: 248 232 233;
   --rn-colors-red-5-val: 240 210 212;
   --rn-colors-red-50-val: 120 41 46;
@@ -128,6 +175,8 @@
   --rn-colors-yellow-50-val: 255 190 0;
   --rn-colors-white: var(--cosmic-gray-0);
   --rn-colors-black: var(--cosmic-gray-10);
+  --rn-colors-white-val: var(--rn-colors-gray-0-val);
+  --rn-colors-black-val: var(--rn-colors-gray-100-val);
   --highlight-color-red: var(--cosmic-highlight-red);
   --highlight-color-orange: var(--cosmic-highlight-orange);
   --highlight-color-yellow: var(--cosmic-highlight-yellow);
@@ -140,12 +189,12 @@
   --bg-yellow-20: var(--cosmic-yellow);
   --bg-orange-20: var(--cosmic-orange);
   --bg-red-20: var(--cosmic-red);
-  --tw-bg-opacity-highlight: 0.22;
+  --tw-bg-opacity-highlight: var(--cosmic-highlight-opacity);
 }
 /* stylelint-enable custom-property-pattern */
 
 /* Only host tokens whose values differ by mode are repeated here. */
-.dark.dark {
+.dark.dark.dark {
   --rn-clr-shadow-default: 0 1px 2px rgb(0 0 0 / 28%);
   --rn-clr-shadow-card: 0 2px 8px rgb(0 0 0 / 32%);
   --rn-clr-shadow-menu: 0 4px 16px rgb(0 0 0 / 40%);
@@ -158,24 +207,31 @@
   --rn-clr-shadow-elevation-30: 0 6px 12px rgb(0 0 0 / 36%);
   --rn-clr-shadow-elevation-40: 0 8px 16px rgb(0 0 0 / 40%);
   --rn-clr-shadow-elevation-50: 0 12px 24px rgb(0 0 0 / 44%);
-  --rn-colors-gray-0-val: 44 44 44;
-  --rn-colors-gray-5-val: 38 38 38;
-  --rn-colors-gray-10-val: 48 48 48;
-  --rn-colors-gray-15-val: 56 56 56;
-  --rn-colors-gray-20-val: 64 64 64;
-  --rn-colors-gray-30-val: 184 184 184;
-  --rn-colors-gray-40-val: 184 184 184;
+  --rn-colors-gray-0-val: 27 27 27;
+  --rn-colors-gray-5-val: 39 39 39;
+  --rn-colors-gray-10-val: 46 46 46;
+  --rn-colors-gray-15-val: 54 54 54;
+  --rn-colors-gray-20-val: 52 52 52;
+  --rn-colors-gray-30-val: 68 68 68;
+  --rn-colors-gray-40-val: 99 99 99;
   --rn-colors-gray-50-val: 171 171 171;
-  --rn-colors-gray-60-val: 184 184 184;
-  --rn-colors-gray-70-val: 192 192 192;
-  --rn-colors-gray-80-val: 237 237 237;
+  --rn-colors-gray-60-val: 190 190 190;
+  --rn-colors-gray-70-val: 222 222 222;
+  --rn-colors-gray-80-val: 231 231 231;
   --rn-colors-gray-90-val: 222 222 222;
   --rn-colors-gray-100-val: 255 255 255;
-  --rn-colors-blue-0-val: 27 40 42;
-  --rn-colors-blue-5-val: 32 64 68;
-  --rn-colors-blue-20-val: 98 184 206;
-  --rn-colors-blue-50-val: 98 184 206;
-  --rn-colors-blue-60-val: 98 184 206;
+  --rn-colors-blue-0-val: 32 40 41;
+  --rn-colors-blue-5-val: 36 49 51;
+  --rn-colors-blue-10-val: 42 65 68;
+  --rn-colors-blue-20-val: 49 85 90;
+  --rn-colors-blue-30-val: 62 121 130;
+  --rn-colors-blue-40-val: 80 164 176;
+  --rn-colors-blue-50-val: 99 208 223;
+  --rn-colors-blue-60-val: 99 208 223;
+  --rn-colors-blue-70-val: 99 208 223;
+  --rn-colors-blue-80-val: 99 208 223;
+  --rn-colors-blue-90-val: 99 208 223;
+  --rn-colors-blue-100-val: 99 208 223;
   --rn-colors-red-0-val: 48 30 30;
   --rn-colors-red-5-val: 80 48 47;
   --rn-colors-red-50-val: 253 161 160;
@@ -183,7 +239,7 @@
   --rn-colors-mint-5-val: 40 70 50;
   --rn-colors-mint-60-val: 94 219 140;
   --rn-colors-cyan-5-val: 32 64 68;
-  --rn-colors-cyan-10-val: 98 184 206;
+  --rn-colors-cyan-10-val: 99 208 223;
   --rn-colors-cyan-100-val: 227 247 249;
   --rn-colors-amber-50-val: 255 190 0;
   --rn-colors-yellow-50-val: 255 190 0;

@@ -1,0 +1,139 @@
+.rn-all-notes {
+  background-color: var(--cosmic-bg);
+  color: var(--cosmic-text);
+}
+
+.rn-all-notes__row:hover {
+  background-color: var(--cosmic-hover);
+}
+
+.rn-all-notes__row__date {
+  color: var(--cosmic-text-2);
+}
+
+.rn-all-notes .rn-all-notes-filter-tab {
+  background-color: var(--cosmic-primary);
+  color: var(--cosmic-text-2);
+}
+
+.rn-all-notes .rn-all-notes-filter-tab:hover {
+  background-color: var(--cosmic-hover);
+  color: var(--cosmic-text);
+}
+
+.rn-all-notes .rn-all-notes-filter-tab--selected {
+  background-color: var(--cosmic-accent-soft);
+  border-color: var(--cosmic-accent-text);
+  color: var(--cosmic-accent-text);
+}
+
+.rn-all-notes .rn-all-notes-filter-tab--selected:hover {
+  background-color: var(--cosmic-accent-mid);
+}
+
+/* RemNote 1.30's filter scroller has inline white gradient overlays. Hide only
+ * those non-interactive siblings; reserve space for the real scroll buttons.
+ * data-test is the host's stable hook where no component class is exposed.
+ */
+.rn-all-notes
+  :has(> [data-test="all-notes-quick-filters"])
+  ~ .pointer-events-none {
+  display: none;
+}
+
+.rn-all-notes
+  :has(> [data-test="Horizontal Scroll Right Button"])
+  > .no-horizontal-scroll {
+  margin-right: 40px;
+}
+
+.rn-all-notes
+  :has(> [data-test="Horizontal Scroll Left Button"])
+  > .no-horizontal-scroll {
+  margin-left: 40px;
+}
+
+.rn-all-notes
+  :is(
+    [data-test="Horizontal Scroll Right Button"],
+    [data-test="Horizontal Scroll Left Button"]
+  ) {
+  background: var(--cosmic-component);
+  border-color: var(--cosmic-border);
+  color: var(--cosmic-text);
+}
+
+.rn-all-notes
+  :is(
+    [data-test="Horizontal Scroll Right Button"],
+    [data-test="Horizontal Scroll Left Button"]
+  ):hover {
+  background: var(--cosmic-hover);
+}
+
+.rn-all-notes
+  :is(
+    [data-test="Horizontal Scroll Right Button"],
+    [data-test="Horizontal Scroll Left Button"]
+  ):focus-visible {
+  /* Inset so the host's overflow clip cannot cut off the focus indicator. */
+  outline: 2px solid var(--cosmic-focus);
+  outline-offset: -3px;
+}
+
+.rn-all-notes [data-test="All Notes Search Input"]::placeholder {
+  color: var(--cosmic-text-3);
+  opacity: 1;
+}
+
+/* The empty-state illustration and cards are painted with inline colors.
+ * A local surface layer covers that paint without changing their layout or
+ * recoloring images. The stable action hook confines this to onboarding.
+ */
+.rn-all-notes
+  .overflow-clip:has(
+    [data-test="Get Started Empty State Type Your Flashcards Button"]
+  ),
+.rn-all-notes :where(.w-10.h-10):has(> span[data-icon]),
+.rn-all-notes [data-test="Get Started Empty State Type Your Flashcards Button"],
+.rn-all-notes
+  [data-test="Get Started Empty State Type Your Flashcards Button"]
+  + div {
+  position: relative;
+  isolation: isolate;
+}
+
+.rn-all-notes
+  .overflow-clip:has(
+    [data-test="Get Started Empty State Type Your Flashcards Button"]
+  )
+  > .absolute {
+  display: none;
+}
+
+.rn-all-notes
+  .overflow-clip:has(
+    [data-test="Get Started Empty State Type Your Flashcards Button"]
+  )::before,
+.rn-all-notes :where(.w-10.h-10):has(> span[data-icon])::before,
+.rn-all-notes
+  [data-test="Get Started Empty State Type Your Flashcards Button"]::before,
+.rn-all-notes
+  [data-test="Get Started Empty State Type Your Flashcards Button"]
+  + div::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--cosmic-primary);
+  pointer-events: none;
+}
+
+.rn-all-notes
+  [data-test="Get Started Empty State Type Your Flashcards Button"]::before,
+.rn-all-notes
+  [data-test="Get Started Empty State Type Your Flashcards Button"]
+  + div::before {
+  background: var(--cosmic-component);
+}

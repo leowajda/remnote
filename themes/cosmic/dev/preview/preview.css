@@ -275,7 +275,119 @@ body {
 .fixture-editor blockquote {
   margin: 16px 0;
   padding-left: 12px;
-  border-left: 3px solid var(--cosmic-purple);
+  border-left: 3px solid var(--cosmic-divider);
+}
+
+.fixture-settings-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  border-radius: var(--cosmic-radius-s);
+}
+
+.fixture-settings-links a {
+  padding: 8px;
+  text-decoration: none;
+}
+
+.fixture-tabs {
+  display: flex;
+  margin-block: 16px;
+  border-bottom: 1px solid var(--cosmic-divider);
+}
+
+.fixture-tabs button {
+  padding: 10px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  font: inherit;
+}
+
+.fixture-tabs [aria-selected="true"] {
+  border-bottom-color: var(--rn-clr-border-accent);
+}
+
+.fixture-highlight {
+  padding: 12px;
+  border-radius: var(--cosmic-radius-xs);
+}
+
+.fixture-search {
+  display: block;
+  width: 100%;
+  margin-block: 16px;
+  padding: 8px;
+  border: 1px solid var(--cosmic-divider);
+  border-radius: var(--cosmic-radius-xs);
+  background: var(--cosmic-bg);
+  color: var(--cosmic-text);
+  font: inherit;
+}
+
+.fixture-checkbox {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.fixture-filter-scroller {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 40px;
+}
+
+.fixture-filter-scroller .no-horizontal-scroll {
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  scrollbar-width: none;
+}
+
+.fixture-filter-scroller [data-test="all-notes-quick-filters"] {
+  display: flex;
+  gap: 8px;
+}
+
+.fixture-filter-scroller button {
+  flex-shrink: 0;
+  height: 30px;
+  padding-inline: 8px;
+  border: 1px solid var(--cosmic-divider);
+  border-radius: 16px;
+  white-space: nowrap;
+  font: inherit;
+  font-size: 12px;
+}
+
+.fixture-filter-scroller > button {
+  position: absolute;
+  width: 30px;
+  padding: 0;
+  font-size: 24px;
+}
+
+.fixture-filter-scroller > [data-test="Horizontal Scroll Left Button"] {
+  left: 4px;
+}
+
+.fixture-filter-scroller > [data-test="Horizontal Scroll Right Button"] {
+  right: 4px;
+}
+
+.fixture-scroll-fade {
+  position: absolute;
+  right: 0;
+  width: 64px;
+  height: 32px;
+  pointer-events: none;
 }
 
 @media (width <= 640px) {

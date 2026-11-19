@@ -6,12 +6,12 @@
   "repoUrl": "https://github.com/leowajda/remnote",
   "version": {
     "major": 0,
-    "minor": 4,
+    "minor": 5,
     "patch": 0
   },
   "theme": ["light", "dark"],
   "enableOnMobile": true,
-  "description": "COSMIC-inspired charcoal and soft-white workspaces with solar yellow, coral, cyan and lavender accents.",
+  "description": "A quiet workspace in charcoal, graphite and ice cyan. One clear accent, readable controls, and considered light and dark modes.",
   "requestNative": false,
   "requiredScopes": [],
   "projectUrl": "https://github.com/leowajda/remnote/tree/master/themes/cosmic",

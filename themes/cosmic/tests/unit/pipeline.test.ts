@@ -20,6 +20,10 @@ test("CSS contract rejects important, missing tokens and unresolved imports", ()
     /Undefined/,
   );
   assert.throws(() => assertCSS('@import "missing.css";'), /Unresolved/);
+  assert.throws(
+    () => assertCSS(".rn-button { background: linear-gradient(red, blue) }"),
+    /Gradient/,
+  );
   assert.doesNotThrow(() =>
     assertCSS(".rn-button { color: var(--rn-host-owned) }"),
   );

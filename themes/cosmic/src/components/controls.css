@@ -11,22 +11,29 @@
 
 .rn-button--primary,
 .rn-button.rn-button--primary,
+.rn-button.rn-button--Primary,
 .rn-primary {
+  /* RemNote puts dark:rn-clr-content-primary on the inner icon/label wrapper. */
+  --rn-clr-content-primary: var(--cosmic-on-accent);
+  --rn-clr-content-secondary: var(--cosmic-on-accent);
+
   background-color: var(--cosmic-accent);
-  background-image: var(--cosmic-solar-ribbon);
+  background-image: none;
   color: var(--cosmic-on-accent);
 }
 
 .rn-button--primary:hover:not(:disabled),
-.rn-button.rn-button--primary:hover:not(:disabled) {
-  background-image: none;
+.rn-button.rn-button--primary:hover:not(:disabled),
+.rn-button.rn-button--Primary:hover:not(:disabled),
+.rn-primary:hover:not(:disabled) {
   background-color: var(--cosmic-accent-hover);
   color: var(--cosmic-on-accent);
 }
 
 .rn-button--primary:active:not(:disabled),
-.rn-button.rn-button--primary:active:not(:disabled) {
-  background-image: none;
+.rn-button.rn-button--primary:active:not(:disabled),
+.rn-button.rn-button--Primary:active:not(:disabled),
+.rn-primary:active:not(:disabled) {
   background-color: var(--cosmic-accent-pressed);
 }
 
@@ -35,8 +42,8 @@
 }
 
 .rn-switch[data-state="checked"] {
-  background-color: var(--cosmic-accent-soft);
-  border: 2px solid var(--cosmic-accent-text);
+  background-color: var(--cosmic-accent);
+  border: 2px solid var(--cosmic-accent);
 }
 
 .rn-switch-handle {
@@ -44,13 +51,53 @@
 }
 
 .rn-switch[data-state="checked"] .rn-switch-handle {
-  background-color: var(--cosmic-accent-text);
+  background-color: var(--cosmic-on-accent);
+}
+
+.rn-switch[data-state][data-disabled] {
+  background: var(--cosmic-component);
+  border-color: var(--cosmic-divider);
+}
+
+.rn-switch[data-state="checked"][data-disabled] {
+  background: var(--cosmic-accent-soft);
+}
+
+.rn-switch .rn-switch-handle[data-state][data-disabled] {
+  background: var(--cosmic-text-muted);
 }
 
 .rn-checkbox--checked {
+  position: relative;
   background-color: var(--cosmic-accent);
   border-color: var(--cosmic-accent);
   color: var(--cosmic-on-accent);
+}
+
+/* Host checkboxes embed a white SVG in an inline background. Cover that paint
+ * and draw a scalable tick in the palette's on-accent color (dark on cyan).
+ */
+.rn-checkbox--checked::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: var(--cosmic-accent);
+  pointer-events: none;
+}
+
+.rn-checkbox--checked::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 12%;
+  left: 30%;
+  width: 30%;
+  height: 50%;
+  border: solid var(--cosmic-on-accent);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  pointer-events: none;
 }
 
 .rn-checkbox--unchecked {
@@ -87,10 +134,19 @@
   accent-color: var(--cosmic-accent);
 }
 
+.rn-settings input[type="checkbox"],
+.rn-settings input[type="radio"] {
+  accent-color: var(--cosmic-accent);
+}
+
 .rn-learning-goal-slider,
 .rn-change-deck-status {
   accent-color: var(--cosmic-accent);
   color: var(--cosmic-text);
+}
+
+.rn-progress-bar {
+  background: var(--cosmic-accent);
 }
 
 @media (prefers-reduced-motion: reduce) {
