@@ -27,12 +27,8 @@
   border-color: var(--cosmic-divider);
 }
 
-/* RemNote 1.30's drawing reader sets the page's inline background from the
- * resolved PDF theme. Only native dark paper serializes as rgb(35, 35, 40),
- * even when the PDF preference differs from the app theme. */
 @media screen {
   .rn-drawing-canvas-pdf-page[style*="background-color: rgb(35, 35, 40)"] {
-    /* Paint the placeholder beneath both absolutely positioned raster tiles. */
     &::before {
       content: "";
       position: absolute;
@@ -41,9 +37,6 @@
       pointer-events: none;
     }
 
-    /* In sRGB, 1 - 255 * sum(abs(pixel - paper)) selects the exact paper
-     * value. Paint COSMIC always-dark atop that mask, retaining source alpha.
-     * Like paper, artwork pixels of exactly the same RGB will also match. */
     & > canvas.rn-drawing-canvas-pdf-worker-canvas {
       filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E\
         %3Cfilter id='paper' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E\
@@ -57,7 +50,6 @@
     }
   }
 
-  /* The reader reuses this utility for the gutter, page gaps and end caps. */
   .editor-drawing-canvas:has(
       .rn-drawing-canvas-pdf-page[style*="background-color: rgb(35, 35, 40)"]
     )

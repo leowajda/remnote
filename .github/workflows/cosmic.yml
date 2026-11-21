@@ -2,7 +2,12 @@ name: COSMIC
 on:
   pull_request:
     paths: &theme_paths
-      - 'themes/cosmic/**'
+      - 'src/**'
+      - 'manifest.json'
+      - 'README.md'
+      - 'logo.png'
+      - 'stylelint.config.mjs'
+      - 'no-css-comments.yml'
       - 'releases/cosmic-*.zip'
       - 'package*.json'
       - '.npmrc'
@@ -29,9 +34,8 @@ jobs:
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npm run check && npm run build
       - name: Compare release contents with the build
-        working-directory: themes/cosmic
         run: |
           version=$(jq -r '.version | [.major,.minor,.patch] | join(".")' manifest.json)
           unzip -q dist/cosmic.zip -d "$RUNNER_TEMP/build"
-          unzip -q "../../releases/cosmic-$version.zip" -d "$RUNNER_TEMP/release"
+          unzip -q "releases/cosmic-$version.zip" -d "$RUNNER_TEMP/release"
           diff -r "$RUNNER_TEMP/build" "$RUNNER_TEMP/release"

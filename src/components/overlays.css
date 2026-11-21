@@ -76,7 +76,6 @@ div[data-cy="omnibar"],
   border-color: var(--cosmic-divider);
 }
 
-/* The host scopes these to a mode and applies its own arrow tokens. */
 .rn-tooltip.rn-tooltip .tippy-arrow {
   --rn-tooltip-background: var(--cosmic-secondary);
   --rn-tooltip-border: var(--cosmic-divider);

@@ -47,10 +47,6 @@ svg[data-icon="rem-top-level-rem-dark"] path[fill="#53535B"] {
   fill: var(--cosmic-border);
 }
 
-/* These host mask icons have hard-coded inline paint. A solid
- * foreground inside the existing mask keeps their shape and restores contrast
- * without important declarations or filters that affect surrounding content.
- */
 .rn-sidebar
   span:is([data-icon="unfold-more"], [data-icon="ipad-sidebar-button"]),
 .rn-all-notes span[data-icon] {

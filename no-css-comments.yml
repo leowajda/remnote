@@ -1,0 +1,6 @@
+id: no-css-comments
+language: Css
+rule:
+  kind: comment
+severity: error
+message: Keep theme CSS comment-free.

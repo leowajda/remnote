@@ -31,10 +31,6 @@
   background-color: var(--cosmic-accent-mid);
 }
 
-/* RemNote 1.30's filter scroller has inline white gradient overlays. Hide only
- * those non-interactive siblings; reserve space for the real scroll buttons.
- * data-test is the host's stable hook where no component class is exposed.
- */
 .rn-all-notes
   :has(> [data-test="all-notes-quick-filters"])
   ~ .pointer-events-none {
@@ -76,7 +72,6 @@
     [data-test="Horizontal Scroll Right Button"],
     [data-test="Horizontal Scroll Left Button"]
   ):focus-visible {
-  /* Inset so the host's overflow clip cannot cut off the focus indicator. */
   outline: 2px solid var(--cosmic-focus);
   outline-offset: -3px;
 }
@@ -86,10 +81,6 @@
   opacity: 1;
 }
 
-/* The empty-state illustration and cards are painted with inline colors.
- * A local surface layer covers that paint without changing their layout or
- * recoloring images. The stable action hook confines this to onboarding.
- */
 .rn-all-notes
   .overflow-clip:has(
     [data-test="Get Started Empty State Type Your Flashcards Button"]
