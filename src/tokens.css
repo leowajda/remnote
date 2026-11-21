@@ -1,8 +1,3 @@
-/* COSMIC-inspired neutrals and cyan, based on the supplied desktop configuration.
- * Cyan means interaction. Other hues belong to content or semantic feedback.
- * Each mode owns its derived values so a nested light reader stays independent.
- * Pressed accent fills are contrast-adjusted companions of the stock palette.
- */
 :root,
 .light {
   color-scheme: light;

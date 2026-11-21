@@ -25,7 +25,6 @@
   background: var(--cosmic-hover);
 }
 
-/* The host paints a second, inset row; keep selection/hover on one surface. */
 .rn-settings .rn-settings__link > .group-hover\:bg-gray-10 {
   background: transparent;
 }
@@ -42,7 +41,6 @@
   opacity: 1;
 }
 
-/* Settings uses utility classes for separators, selects and custom radios. */
 .light .rn-settings :where(.border-gray-10, .border-gray-15:not(.rn-button)) {
   border-color: var(--cosmic-divider);
 }
@@ -52,9 +50,6 @@
   border-color: var(--cosmic-border);
 }
 
-/* Appearance thumbnails use inline blue shadows, separate from host tokens.
- * Replace that decorative overlay with the same outline as other selections.
- */
 .rn-settings button:has(> sub) > .relative > .absolute {
   display: none;
 }

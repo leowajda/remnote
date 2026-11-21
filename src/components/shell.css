@@ -99,8 +99,6 @@
   color: var(--cosmic-text);
 }
 
-/* MobileTabBarInner paints the tab grid and the safe area with the same
- * background token. Only the selected tab gets the secondary surface. */
 .border-t:has(> .grid > [data-test="Go home"]) {
   --rn-clr-background-primary: var(--cosmic-primary);
 

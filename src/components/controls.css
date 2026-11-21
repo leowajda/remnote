@@ -17,7 +17,6 @@
 .rn-button.rn-button--primary,
 .rn-button.rn-button--Primary,
 .rn-primary {
-  /* RemNote puts dark:rn-clr-content-primary on the inner icon/label wrapper. */
   --rn-clr-content-primary: var(--cosmic-on-accent);
   --rn-clr-content-secondary: var(--cosmic-on-accent);
 
@@ -78,9 +77,6 @@
   color: var(--cosmic-on-accent);
 }
 
-/* Host checkboxes embed a white SVG in an inline background. Cover that paint
- * and draw a scalable tick in the palette's on-accent color (dark on cyan).
- */
 .rn-checkbox--checked::after {
   content: "";
   position: absolute;

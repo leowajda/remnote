@@ -6,8 +6,8 @@ Keep changes small. Use Conventional Commits. Keep the release ID `cosmic-dark`.
 | --- | --- |
 | Install | `npm ci` (Node 24) |
 | Check and package COSMIC | `npm run check && npm run build` |
-| Edit CSS | `themes/cosmic/src/`; never edit `dist/` |
-| Theme page | `themes/cosmic/README.md` |
+| Edit CSS | `src/`; never edit `dist/` |
+| Theme page | `README.md` |
 | CSS and themes | https://plugins.remnote.com/custom-css |
 | Manifest | https://plugins.remnote.com/advanced/manifest |
 | Publishing | https://plugins.remnote.com/advanced/submitting_plugins |

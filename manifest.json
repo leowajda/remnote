@@ -3,17 +3,17 @@
   "id": "cosmic-dark",
   "name": "COSMIC for RemNote",
   "author": "leowajda",
-  "repoUrl": "https://github.com/leowajda/remnote",
+  "repoUrl": "https://github.com/leowajda/remnote-cosmic-theme",
   "version": {
     "major": 0,
     "minor": 5,
-    "patch": 1
+    "patch": 2
   },
   "theme": ["light", "dark"],
   "enableOnMobile": true,
   "description": "A quiet workspace in charcoal, graphite and ice cyan. One clear accent, readable controls, and considered light and dark modes.",
   "requestNative": false,
   "requiredScopes": [],
-  "projectUrl": "https://github.com/leowajda/remnote/tree/master/themes/cosmic",
-  "supportUrl": "https://github.com/leowajda/remnote/issues"
+  "projectUrl": "https://github.com/leowajda/remnote-cosmic-theme",
+  "supportUrl": "https://github.com/leowajda/remnote-cosmic-theme/issues"
 }

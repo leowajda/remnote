@@ -49,7 +49,6 @@
   border-color: var(--cosmic-divider);
 }
 
-/* Beautiful Queue paints the card behind these inline Rems and badges. */
 :is(.rn-queue-rem, .rn-question-rem):where(
   :not(.queue-beautiful-page-background--mobile-device *)
 ) {
@@ -80,7 +79,6 @@
   color: var(--cosmic-on-accent);
 }
 
-/* Rating colors convey recall feedback, rather than selection. */
 .rn-queue__answer-btn--forgotten,
 .queue-beautiful-page-background--mobile-device
   [data-beautiful-grade="Forgot"] {
@@ -173,8 +171,6 @@
   }
 }
 
-/* The phone shell and its edge-to-edge safe area are painted separately.
- * Override the background that consumes RemNote's inline gradient tokens. */
 body.queue-beautiful-system-area-background,
 .queue-beautiful-page-background.queue-beautiful-page-background--mobile-device,
 .queue--mobile
@@ -186,9 +182,6 @@ body.queue-beautiful-system-area-background,
   background-color: transparent;
 }
 
-/* RemNote interpolates the next card from the back color to the face color
- * as it advances. Supply endpoints rather than painting over that animation. */
-/* stylelint-disable custom-property-pattern -- Shipped Beautiful Queue paint tokens. */
 .queue-beautiful-page-background--mobile-device .beautiful-queue-swipe-stage {
   --beautiful-queue-mobile-surface-border: var(--cosmic-divider);
   --beautiful-queue-mobile-back-stack-card-bg: var(--cosmic-primary);
@@ -199,7 +192,6 @@ body.queue-beautiful-system-area-background,
   > .queue-beautiful-box:is(.rn-queue, .beautiful-queue-stack-card) {
   --beautiful-queue-box-bg: var(--cosmic-component);
 }
-/* stylelint-enable custom-property-pattern */
 
 .queue-beautiful-page-background--mobile-device
   .beautiful-queue-swipe-stage
@@ -207,7 +199,6 @@ body.queue-beautiful-system-area-background,
   background-color: var(--cosmic-component);
 }
 
-/* With no controls over the text, the overlay scrollbar is enough of a cue. */
 .queue-beautiful-page-background--mobile-device
   .beautiful-queue-bottom-fade-mask--no-controls
   > .beautiful-queue-bottom-fade-mask__gradient {
@@ -219,8 +210,6 @@ body.queue-beautiful-system-area-background,
   background-color: var(--cosmic-border);
 }
 
-/* Beautiful Queue's two positive grades are Solid (green) and Easy (accent).
- * The grade buttons can be portalled outside the card on phones. */
 .queue-beautiful-page-background--mobile-device [data-beautiful-grade="Easy"] {
   --cosmic-rating: var(--cosmic-accent-text);
   --cosmic-rating-surface: var(--cosmic-accent-soft);
