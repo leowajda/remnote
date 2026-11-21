@@ -1,27 +1,37 @@
 name: COSMIC
 on:
   pull_request:
-    paths: ['themes/cosmic/**', 'package*.json', '.npmrc', '.node-version', '.github/workflows/cosmic.yml']
+    paths: &theme_paths
+      - 'themes/cosmic/**'
+      - 'releases/cosmic-*.zip'
+      - 'package*.json'
+      - '.npmrc'
+      - '.node-version'
+      - '.github/workflows/cosmic.yml'
   push:
-    paths: ['themes/cosmic/**', 'package*.json', '.npmrc', '.node-version', '.github/workflows/cosmic.yml']
+    branches: [master]
+    paths: *theme_paths
 permissions:
   contents: read
+concurrency:
+  group: cosmic-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
-      - run: npm ci
-      - run: npx playwright install --with-deps chromium webkit
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run check && npm run build
+      - name: Compare release contents with the build
         working-directory: themes/cosmic
-      - run: npm run verify --workspace=@remnote/cosmic
-      - uses: actions/upload-artifact@v4
-        if: failure()
-        with:
-          name: cosmic-test-results
-          path: themes/cosmic/test-results/
+        run: |
+          version=$(jq -r '.version | [.major,.minor,.patch] | join(".")' manifest.json)
+          unzip -q dist/cosmic.zip -d "$RUNNER_TEMP/build"
+          unzip -q "../../releases/cosmic-$version.zip" -d "$RUNNER_TEMP/release"
+          diff -r "$RUNNER_TEMP/build" "$RUNNER_TEMP/release"

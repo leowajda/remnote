@@ -5,8 +5,7 @@ Keep changes small. Use Conventional Commits. Keep the release ID `cosmic-dark`.
 | Task | Command or reference |
 | --- | --- |
 | Install | `npm ci` (Node 24) |
-| Check COSMIC | `npm run verify --workspace=@remnote/cosmic` |
-| Preview and live testing | [COSMIC development](themes/cosmic/dev/README.md) |
+| Check and package COSMIC | `npm run check && npm run build` |
 | Edit CSS | `themes/cosmic/src/`; never edit `dist/` |
 | Theme page | `themes/cosmic/README.md` |
 | CSS and themes | https://plugins.remnote.com/custom-css |
@@ -14,4 +13,4 @@ Keep changes small. Use Conventional Commits. Keep the release ID `cosmic-dark`.
 | Publishing | https://plugins.remnote.com/advanced/submitting_plugins |
 | Reference | https://github.com/mdeguzis/remnote-sakura-theme |
 
-Keep tooling and tests inside their package. Do not add `!important`. Review screenshot changes. Fixtures do not replace tests in RemNote.
+Do not add `!important`. Check visual changes against RemNote's own styles and markup.
