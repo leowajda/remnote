@@ -35,8 +35,8 @@
   --cosmic-text-2: #272727;
   --cosmic-text-3: #484848;
   --cosmic-text-muted: #555;
-  --cosmic-button: #c4c4c4;
-  --cosmic-button-hover: #b7b7b7;
+  --cosmic-button: var(--cosmic-component);
+  --cosmic-button-hover: var(--cosmic-primary);
   --cosmic-button-on: #272727;
   --cosmic-inverse-bg: #1b1b1b;
   --cosmic-inverse-bg-2: #272727;

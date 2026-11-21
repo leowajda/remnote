@@ -9,6 +9,10 @@
   color: var(--cosmic-text);
 }
 
+.light .rn-button--Outline {
+  border-color: var(--cosmic-gray-6);
+}
+
 .rn-button--primary,
 .rn-button.rn-button--primary,
 .rn-button.rn-button--Primary,
