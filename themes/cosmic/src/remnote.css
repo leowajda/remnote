@@ -169,7 +169,13 @@
   --rn-colors-mint-5-val: 209 232 216;
   --rn-colors-mint-60-val: 24 85 41;
   --rn-colors-cyan-5-val: 204 228 230;
-  --rn-colors-cyan-10-val: 23 100 120;
+
+  /* Informational notices pair bg-cyan-10 with text-cyan-80. Keep the
+   * former a surface and the latter ink in both appearances. */
+  --rn-colors-cyan-10-val: var(--rn-colors-blue-5-val);
+  --rn-colors-cyan-80-val: var(--rn-colors-blue-80-val);
+  --rn-colors-cyan-10: rgb(var(--rn-colors-cyan-10-val));
+  --rn-colors-cyan-80: rgb(var(--rn-colors-cyan-80-val));
   --rn-colors-cyan-100-val: 0 40 44;
   --rn-colors-amber-50-val: 117 82 0;
   --rn-colors-yellow-50-val: 255 190 0;
@@ -239,7 +245,6 @@
   --rn-colors-mint-5-val: 40 70 50;
   --rn-colors-mint-60-val: 94 219 140;
   --rn-colors-cyan-5-val: 32 64 68;
-  --rn-colors-cyan-10-val: 99 208 223;
   --rn-colors-cyan-100-val: 227 247 249;
   --rn-colors-amber-50-val: 255 190 0;
   --rn-colors-yellow-50-val: 255 190 0;
